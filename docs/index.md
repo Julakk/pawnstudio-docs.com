@@ -46,6 +46,40 @@ features:
 <div class="platform soon"><div class="ico"><svg viewBox="0 0 24 24"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg></div><h3>Python</h3><p>Dukungan Python lagi disiapkan.</p><span class="badge soon">Coming Soon</span></div>
 </div>
 
+## Terbaru
+
+<p class="sub">Yang baru di rilis terbaru.</p>
+
+<div class="platform-grid">
+<div class="platform"><div class="ico"><svg viewBox="0 0 24 24"><line x1="16.5" y1="9.4" x2="7.5" y2="4.21"/><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></div><h3>Include Bawaan</h3><p>sscanf2, YSI, streamer, zcmd, dan lainnya sudah ada di dalam APK.</p><span class="badge ver">v1.15.0</span></div>
+<div class="platform"><div class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg></div><h3>Panel Ekstensi</h3><p>Pasang snippet, tema editor, dan paket include dari file atau repo GitHub.</p><span class="badge ver">v1.15.0</span></div>
+<div class="platform"><div class="ico"><svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><polyline points="9 11 11 13 15 9"/></svg></div><h3>Cek HP</h3><p>Cek kompatibilitas HP lo: compiler, Node.js, Git, dan izin yang dibutuhkan.</p><span class="badge ver">v1.14.1</span></div>
+</div>
+
+<div class="more">
+
+[Lihat semua perubahan](/changelog)
+
+</div>
+
+## Include Bawaan
+
+<p class="sub">Sudah ada di dalam APK, nggak perlu dipasang manual. Include milik proyek lo tetap diprioritaskan.</p>
+
+<div class="chips">
+<span class="chip">sscanf2</span>
+<span class="chip">YSI</span>
+<span class="chip">streamer</span>
+<span class="chip">a_mysql</span>
+<span class="chip">zcmd</span>
+<span class="chip">I-ZCMD</span>
+<span class="chip">Pawn.CMD</span>
+<span class="chip">Pawn.RakNet</span>
+<span class="chip">crashdetect</span>
+<span class="chip">amx_assembly</span>
+<span class="chip">weapon-config</span>
+</div>
+
 ## Cara Kerja
 
 <p class="sub">Tiga langkah dari install sampai jalan.</p>
@@ -54,6 +88,20 @@ features:
 <div class="step"><div class="num">1</div><h3>Install</h3><p>Download APK dari GitHub lalu install di HP lo.</p></div>
 <div class="step"><div class="num">2</div><h3>Buka Proyek</h3><p>Pilih folder proyek, lalu buka file yang mau diedit.</p></div>
 <div class="step"><div class="num">3</div><h3>Coding & Compile</h3><p>Edit kode, tekan Compile, dan hasilnya siap dipakai.</p></div>
+</div>
+
+## Pertanyaan Umum
+
+<div class="faq">
+<details><summary>Apakah PawnStudio gratis?</summary><p>Ya, gratis dipakai. Tapi bukan open source, dan kode yang lo tulis tetap milik lo.</p></details>
+<details><summary>Perlu Termux?</summary><p>Nggak. Compiler PAWN, Node.js, dan npm sudah ada di dalam aplikasi.</p></details>
+<details><summary>HP apa yang didukung?</summary><p>Android dengan arsitektur arm64. Cek lewat Pengaturan, tombol Cek HP.</p></details>
+</div>
+
+<div class="more">
+
+[Lihat semua FAQ](/faq)
+
 </div>
 
 ## Komunitas & Dukungan
