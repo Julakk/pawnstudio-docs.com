@@ -25,6 +25,10 @@ export default defineConfig({
         items: [
           { text: 'Mulai Cepat', link: '/guide/getting-started' },
           { text: 'Cara Pakai', link: '/guide/usage' },
+          { text: 'Compile Pertama', link: '/guide/first-compile' },
+          { text: 'Versi SA-MP & open.mp', link: '/guide/samp-versions' },
+          { text: 'Pakai Git', link: '/guide/git' },
+          { text: 'Fitur Editor', link: '/guide/editor-features' },
           { text: 'Troubleshooting', link: '/guide/troubleshooting' }
         ]
       },
