@@ -23,7 +23,7 @@ Jalankan script `.js` dan pasang paket JavaScript murni langsung di HP. Cocok bu
 console.log('Halo dari PawnStudio!')
 ```
 
-Paket yang butuh build native (node-gyp) kemungkinan nggak bisa dipasang. Pilih paket JavaScript murni.
+npm sudah bawaan app. Ketuk tombol **npm** di header Explorer lalu ketik perintah, misalnya `install discord.js`. Script tetap jalan di latar belakang lewat notifikasi **Node.js berjalan** (ada tombol Stop), jadi bot nggak mati waktu app ditutup. Runtime yang dipakai Node.js 18.
 
 ## Preview HTML/CSS/JS
 

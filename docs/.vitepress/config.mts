@@ -14,6 +14,7 @@ export default defineConfig({
       { text: 'Fitur', link: '/features' },
       { text: 'Panduan', link: '/guide/getting-started' },
       { text: 'Referensi', link: '/reference/languages' },
+      { text: 'FAQ', link: '/faq' },
       { text: 'Changelog', link: '/changelog' },
       { text: 'Download', link: '/download' }
     ],
@@ -36,9 +37,19 @@ export default defineConfig({
         text: 'Referensi',
         items: [
           { text: 'Bahasa & Platform', link: '/reference/languages' },
-          { text: 'Tipe File', link: '/reference/file-types' }
+          { text: 'Tipe File', link: '/reference/file-types' },
+          { text: 'Snippet PAWN', link: '/reference/snippets' }
         ]
       },
+      {
+        text: 'Tutorial',
+        items: [
+          { text: 'Bikin Bot Node.js', link: '/tutorials/node-bot' },
+          { text: 'Bikin Website HTML', link: '/tutorials/html-site' }
+        ]
+      },
+      { text: 'FAQ', link: '/faq' },
+      { text: 'Tentang dan Kontribusi', link: '/about' },
       { text: 'Changelog', link: '/changelog' }
     ],
     socialLinks: [{ icon: 'github', link: REPO }],

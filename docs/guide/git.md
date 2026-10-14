@@ -1,22 +1,27 @@
 # Pakai Git dari HP
 
-PawnStudio punya fitur Git bawaan: status, commit, push, dan pull, semua langsung dari HP.
+PawnStudio punya Git bawaan, jadi lo nggak perlu Termux.
+
+## Yang bisa dilakukan
+
+- Lihat status file, cabang, dan riwayat commit
+- Atur akun dan inisialisasi repo
+- Commit file yang dipilih
+- Atur remote, lalu push dan pull dengan token GitHub
 
 ## Persiapan
 
-- Folder proyek sudah berupa repo Git dan remote-nya sudah di-set.
-- Akun GitHub nggak menerima password biasa untuk push lewat HTTPS. Pakai **Personal Access Token** (buat di GitHub: Settings → Developer settings → Personal access tokens).
+GitHub nggak menerima password biasa untuk push lewat HTTPS. Buat **Personal Access Token** di GitHub (Settings → Developer settings → Personal access tokens), lalu pakai token itu di PawnStudio.
 
 ## Alur harian
 
-1. **Pull** dulu supaya proyek lo sinkron dengan versi terbaru.
+1. **Pull** dulu supaya proyek sinkron.
 2. Edit kode seperti biasa.
-3. Cek **Status** buat lihat file apa saja yang berubah.
-4. **Commit** dengan pesan yang jelas, misalnya `fix: sistem login`.
+3. Cek status, lalu **centang file** yang mau di-commit. Hanya file yang dicentang yang masuk commit.
+4. Commit dengan pesan yang jelas.
 5. **Push** ke GitHub.
 
 ## Tips
 
-- Commit kecil dan sering lebih aman daripada satu commit raksasa.
-- Kalau pull bikin konflik, buka file yang konflik, pilih versi yang benar, hapus penanda konflik, lalu commit.
+- Push dan Pull punya batas waktu 60 detik. Kalau koneksi macet, prosesnya berhenti sendiri dan app nggak menggantung. Coba lagi saat sinyal lebih baik.
 - Jangan commit token atau password ke repo.
