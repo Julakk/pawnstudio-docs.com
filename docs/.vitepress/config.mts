@@ -44,7 +44,7 @@ export default defineConfig({
       text: 'Edit halaman ini di GitHub'
     },
     footer: {
-      message: 'Website ini dirilis di bawah lisensi MIT. Aplikasi PawnStudio gratis dipakai.',
+      message: 'PawnStudio Freeware License. Gratis dipakai, bukan open source.',
       copyright: 'Copyright © 2026 Julak Junior'
     }
   }
