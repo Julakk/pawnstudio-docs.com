@@ -1,6 +1,6 @@
 # pawnstudio-docs
 
-Website dan dokumentasi resmi untuk [PawnStudio](https://github.com/Julakk/PawnStudio).
+Website dan dokumentasi resmi untuk [PawnStudio](https://github.com/Julakk/Pawn-Studio).
 
 Dibangun dengan [VitePress](https://vitepress.dev). Repo ini dipisah dari repo aplikasi supaya website punya siklus rilis sendiri.
 

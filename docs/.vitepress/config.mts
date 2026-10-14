@@ -1,18 +1,20 @@
 import { defineConfig } from 'vitepress'
 
+const REPO = 'https://github.com/Julakk/Pawn-Studio'
+
 export default defineConfig({
   lang: 'id-ID',
   title: 'PawnStudio',
-  description: 'IDE mobile untuk scripting PAWN / SA-MP langsung dari HP.',
+  description: 'IDE mobile untuk coding SA-MP, open.mp, Node.js, dan web langsung dari HP.',
   base: process.env.VITEPRESS_BASE || '/pawnstudio-docs.com/',
   cleanUrls: true,
   lastUpdated: true,
   themeConfig: {
     nav: [
       { text: 'Panduan', link: '/guide/getting-started' },
-      { text: 'Referensi', link: '/reference/file-types' },
+      { text: 'Referensi', link: '/reference/languages' },
       { text: 'Changelog', link: '/changelog' },
-      { text: 'Download', link: 'https://github.com/Julakk/PawnStudio/releases/latest' }
+      { text: 'Download', link: REPO }
     ],
     sidebar: [
       {
@@ -25,11 +27,14 @@ export default defineConfig({
       },
       {
         text: 'Referensi',
-        items: [{ text: 'Tipe File', link: '/reference/file-types' }]
+        items: [
+          { text: 'Bahasa & Platform', link: '/reference/languages' },
+          { text: 'Tipe File', link: '/reference/file-types' }
+        ]
       },
       { text: 'Changelog', link: '/changelog' }
     ],
-    socialLinks: [{ icon: 'github', link: 'https://github.com/Julakk/PawnStudio' }],
+    socialLinks: [{ icon: 'github', link: REPO }],
     search: { provider: 'local' },
     editLink: {
       pattern: 'https://github.com/Julakk/pawnstudio-docs.com/edit/main/docs/:path',

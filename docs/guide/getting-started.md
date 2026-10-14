@@ -2,7 +2,7 @@
 
 ## Install
 
-1. Buka halaman [Releases](https://github.com/Julakk/PawnStudio/releases/latest).
+1. Buka halaman [Releases](https://github.com/Julakk/Pawn-Studio/releases/latest).
 2. Download file APK versi terbaru.
 3. Install APK (izinkan install dari sumber tidak dikenal kalau diminta).
 4. Buka PawnStudio dan beri izin akses penyimpanan.

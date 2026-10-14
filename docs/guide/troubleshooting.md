@@ -14,4 +14,4 @@ Aktifkan izin install dari sumber tidak dikenal, dan pastikan file APK tidak rus
 
 ## Masih bermasalah?
 
-Buat issue di [repo PawnStudio](https://github.com/Julakk/PawnStudio/issues) lengkap dengan pesan error-nya.
+Buat issue di [repo PawnStudio](https://github.com/Julakk/Pawn-Studio/issues) lengkap dengan pesan error-nya.
