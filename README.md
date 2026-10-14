@@ -1,45 +1,54 @@
-# pawnstudio-docs
+<div align="center">
 
-Website dan dokumentasi resmi untuk [PawnStudio](https://github.com/Julakk/Pawn-Studio).
+# 🐾 PawnStudio
+*Powerful Code Editor for Pawn Scripting on Android*
 
-Dibangun dengan [VitePress](https://vitepress.dev). Repo ini dipisah dari repo aplikasi supaya website punya siklus rilis sendiri.
+[![Version](https://img.shields.io/badge/version-v1.15.0-blue.svg)]()
+[![License](https://img.shields.io/badge/license-Freeare-orange.svg)](https://github.com/Julakk/Pawn-Studio/blob/main/LICENSE)
+[![Discord](https://img.shields.io/badge/discord-join%20community-7289da.svg)](https://discord.gg/82hxdZy6Gf)
+[![Saweria](https://img.shields.io/badge/support-saweria-orange.svg)](https://saweria.co/bangjulak12)
 
-## Menjalankan di lokal
+</div>
 
-Butuh Node.js 18 atau lebih baru.
+---
 
-```bash
-npm install
-npm run dev       # server development
-npm run build     # build ke docs/.vitepress/dist
-npm run preview   # lihat hasil build
-```
+## 📖 Tentang
+**PawnStudio** adalah *code editor* berbasis web yang dirancang khusus untuk perangkat Android. Fokus utama kami adalah menghadirkan pengalaman *coding* Pawn yang ringan, responsif, dan fleksibel, memungkinkan kamu untuk mengelola dan menyusun kode langsung dari *smartphone* di mana saja.
 
-## Struktur
+## ✨ Fitur Utama
 
-```
-docs/
-├── .vitepress/config.mts   # navigasi, sidebar, tema
-├── index.md                # landing page
-├── guide/                  # panduan instalasi dan penggunaan
-├── reference/              # referensi file dan compiler
-└── changelog.md            # ringkasan rilis
-```
+- 💻 **Monaco Editor**: pengalaman coding yang familiar, mirip VS Code
+- 🧠 **Auto-complete PAWN**: saran `native`, `stock`, `define`, dan `enum` dari isi project
+- 🔨 **Compile langsung di HP**: `pawncc` native (arm64) dengan panel output
+- 🎯 **Pilihan versi SA-MP**: `0.3.DL-R1`, `0.3.7-R2-1`, atau `0.3.7-R3`, plus dukungan include open.mp
+- 🔎 **Cari & Ganti di semua file**: opsi huruf besar/kecil, kata utuh, regex, dan filter ekstensi
+- 🐙 **Git di dalam aplikasi**: status, commit, push, dan pull langsung dari HP
+- ⚡ **Emmet & Format Kode**: ketik `ul>li*3` di HTML/CSS, plus tombol **Fmt**
+- 👁️ **Preview HTML/CSS/JS**: live preview dan mode split
+- 🟩 **Node.js & npm di HP**: jalankan script `.js` dan pasang paket JavaScript murni
+- 🎨 **Pengaturan**: tema editor, ukuran font, dan flag compiler tambahan
+- 📂 **File & Folder Management**: upload file/folder, buat direktori, multi-tab
+- 📱 **Mobile Optimized**: antarmuka dirancang untuk layar sentuh
 
-## Deploy
+## 📲 Install
 
-Workflow `.github/workflows/deploy.yml` mem-build dan men-deploy ke GitHub Pages setiap push ke `main`. Aktifkan dulu di repo: Settings → Pages → Source: GitHub Actions.
+Download APK terbaru di tab [**Releases**](https://github.com/Julakk/Pawn-Studio/releases), lalu install di Android (arm64).
 
-Base path default adalah `/pawnstudio-docs.com/` (sesuai nama repo). Kalau pakai domain sendiri atau Cloudflare Pages, build dengan `VITEPRESS_BASE=/`:
+## 🚧 Status Proyek
 
-```bash
-VITEPRESS_BASE=/ npm run build
-```
+PawnStudio berada dalam **pengembangan aktif** (versi saat ini **v1.12.0**). Kalau ada error compile atau fitur yang tidak berjalan di gamemode kamu, laporkan lewat **Issue** atau Discord, sertakan teks error dari panel Output.
 
-## Berkontribusi
+## 🤝 Kontribusi
+Kami sangat terbuka untuk kontribusi! Jika kamu menemukan *bug* atau memiliki ide fitur baru, jangan ragu untuk:
+1. Membuka **Issue** baru.
+2. Melakukan *pull request* untuk perbaikan.
 
-Edit file Markdown di folder `docs/`. Tiap halaman punya tautan "Edit halaman ini di GitHub".
+---
+<div align="center">
+  <sub>Dikembangkan dengan ❤️ oleh <a href="https://github.com/Julakk">Julakk</a></sub>
+</div>
 
-## Lisensi
+## 📄 Lisensi
 
-Kode website ini dirilis di bawah MIT (lihat `LICENSE`).
+PawnStudio **gratis dipakai tapi bukan open source**. Dilarang membagikan ulang APK, menjual, mengubah, atau membongkar aplikasinya. Kode yang kamu tulis dengan PawnStudio tetap milikmu. Selengkapnya di [LICENSE](https://github.com/Julakk/Pawn-Studio/blob/main/LICENSE), dan komponen pihak ketiga di [THIRD_PARTY_NOTICES.md](https://github.com/Julakk/Pawn-Studio/blob/main/THIRD_PARTY_NOTICES.md).
+

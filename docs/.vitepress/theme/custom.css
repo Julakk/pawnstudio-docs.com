@@ -148,3 +148,37 @@
   border: 1px solid var(--vp-c-divider);
   color: var(--vp-c-text-1);
 }
+
+.VPFeature .icon {
+  color: var(--vp-c-brand-1);
+}
+.VPFeature .icon svg,
+.platform .ico svg {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.VPFeature .icon svg {
+  width: 24px;
+  height: 24px;
+}
+.platform .ico {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: var(--vp-c-brand-soft);
+  color: var(--vp-c-brand-1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.platform .ico svg {
+  width: 24px;
+  height: 24px;
+}
+.platform.soon .ico {
+  color: #f59e0b;
+  background: rgba(245, 158, 11, 0.16);
+}
