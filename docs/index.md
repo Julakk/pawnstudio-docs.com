@@ -29,9 +29,9 @@ features:
   - icon: '<svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>'
     title: Mobile First
     details: Tampilan dan kontrol dirancang untuk layar sentuh.
-  - icon: '<svg viewBox="0 0 24 24"><line x1="6" y1="3" x2="6" y2="15"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M18 9a9 9 0 0 1-9 9"/></svg>'
-    title: Gratis & Open Source
-    details: Kode aplikasi terbuka di GitHub. Kontribusi sangat diterima.
+  - icon: '<svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>'
+    title: Gratis Dipakai
+    details: Gratis dipakai. Kode yang lo tulis tetap milik lo.
 ---
 
 ## Didukung
@@ -56,9 +56,19 @@ features:
 <div class="step"><div class="num">3</div><h3>Coding & Compile</h3><p>Edit kode, tekan Compile, dan hasilnya siap dipakai.</p></div>
 </div>
 
+## Komunitas & Dukungan
+
+<p class="sub">Ada pertanyaan, bug, atau mau support pengembangan? Mampir ke sini.</p>
+
+<div class="platform-grid">
+<div class="platform"><div class="ico"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></div><h3>Discord</h3><p>Tanya, lapor bug, dan ngobrol bareng pengguna lain.</p><a href="https://discord.gg/82hxdZy6Gf">Gabung Discord</a></div>
+<div class="platform"><div class="ico"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div><h3>Saweria</h3><p>Dukung pengembangan PawnStudio biar terus update.</p><a href="https://saweria.co/bangjulak12">Dukung via Saweria</a></div>
+<div class="platform"><div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div><h3>Laporkan Masalah</h3><p>Buka Issue di GitHub dan sertakan teks error dari panel Output.</p><a href="https://github.com/Julakk/Pawn-Studio/issues">Buka Issue</a></div>
+</div>
+
 <div class="cta">
 <h3>Siap ngoding dari HP?</h3>
 <p>Download PawnStudio dan mulai bikin proyek pertama lo.</p>
-<a class="btn" href="https://github.com/Julakk/Pawn-Studio">Download APK</a>
-<a class="btn alt" href="/pawnstudio-docs.com/guide/getting-started">Baca Panduan</a>
+<a class="btn" href="/pawnstudio-docs.com/download">Download</a>
+<a class="btn alt" href="/pawnstudio-docs.com/features">Lihat Semua Fitur</a>
 </div>

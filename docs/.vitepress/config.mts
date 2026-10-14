@@ -11,12 +11,15 @@ export default defineConfig({
   lastUpdated: true,
   themeConfig: {
     nav: [
+      { text: 'Fitur', link: '/features' },
       { text: 'Panduan', link: '/guide/getting-started' },
       { text: 'Referensi', link: '/reference/languages' },
       { text: 'Changelog', link: '/changelog' },
-      { text: 'Download', link: REPO }
+      { text: 'Download', link: '/download' }
     ],
     sidebar: [
+      { text: 'Fitur', link: '/features' },
+      { text: 'Download', link: '/download' },
       {
         text: 'Panduan',
         items: [
@@ -41,7 +44,7 @@ export default defineConfig({
       text: 'Edit halaman ini di GitHub'
     },
     footer: {
-      message: 'Dirilis di bawah lisensi MIT.',
+      message: 'Website ini dirilis di bawah lisensi MIT. Aplikasi PawnStudio gratis dipakai.',
       copyright: 'Copyright © 2026 Julak Junior'
     }
   }
