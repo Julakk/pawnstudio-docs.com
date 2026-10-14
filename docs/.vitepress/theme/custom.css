@@ -261,3 +261,29 @@
   margin: 10px 0 0;
   color: var(--vp-c-text-2);
 }
+
+.stats {
+  box-sizing: content-box;
+  padding: 0 24px;
+  margin: 8px auto 32px;
+}
+@media (min-width: 640px) {
+  .stats {
+    padding: 0 48px;
+  }
+}
+@media (min-width: 960px) {
+  .stats {
+    padding: 0 64px;
+  }
+}
+
+.platform-grid.center {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.platform-grid.center .platform {
+  flex: 0 1 calc(25% - 11px);
+  min-width: 150px;
+}

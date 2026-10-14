@@ -38,7 +38,7 @@ features:
 
 <p class="sub">Bahasa dan platform yang bisa lo pakai di PawnStudio.</p>
 
-<div class="platform-grid">
+<div class="platform-grid center">
 <div class="platform"><div class="ico"><svg viewBox="0 0 24 24"><line x1="6" y1="12" x2="10" y2="12"/><line x1="8" y1="10" x2="8" y2="14"/><line x1="15" y1="13" x2="15.01" y2="13"/><line x1="18" y1="11" x2="18.01" y2="11"/><rect x="2" y="6" width="20" height="12" rx="2"/></svg></div><h3>SA-MP</h3><p>Gamemode dan filterscript PAWN untuk server SA-MP.</p><span class="badge ok">Tersedia</span></div>
 <div class="platform"><div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div><h3>open.mp</h3><p>Scripting PAWN untuk server open.mp.</p><span class="badge ok">Tersedia</span></div>
 <div class="platform"><div class="ico"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg></div><h3>Node.js</h3><p>Tulis script JavaScript untuk bot dan backend.</p><span class="badge ok">Tersedia</span></div>
