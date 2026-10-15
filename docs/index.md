@@ -46,7 +46,7 @@ features:
 <div class="platform"><div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div><h3>open.mp</h3><p>Scripting PAWN untuk server open.mp.</p><span class="badge ok">Tersedia</span></div>
 <div class="platform"><div class="ico"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg></div><h3>Node.js</h3><p>Tulis script JavaScript untuk bot dan backend.</p><span class="badge ok">Tersedia</span></div>
 <div class="platform"><div class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg></div><h3>HTML, CSS, JavaScript</h3><p>Bikin website dan halaman web langsung dari HP.</p><span class="badge ok">Tersedia</span></div>
-<div class="platform soon"><div class="ico"><svg viewBox="0 0 24 24"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg></div><h3>Python</h3><p>Dukungan Python lagi disiapkan.</p><span class="badge soon">Coming Soon</span></div>
+<div class="platform"><div class="ico"><svg viewBox="0 0 24 24"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg></div><h3>Python</h3><p>Jalankan script Python langsung di HP, offline lewat Pyodide.</p><span class="badge ok">Tersedia</span></div>
 </div>
 
 ## Terbaru

@@ -5,7 +5,7 @@ description: "Download PawnStudio untuk Android. Persyaratan, cara install, dan 
 # Download
 
 <div class="cta">
-<h3>PawnStudio v1.15.0</h3>
+<h3>PawnStudio v1.15.1</h3>
 <p>Gratis dipakai. Untuk Android (arm64).</p>
 <a class="btn" href="https://github.com/Julakk/Pawn-Studio/releases">Download APK</a>
 <a class="btn alt" href="https://github.com/Julakk/Pawn-Studio">Lihat di GitHub</a>

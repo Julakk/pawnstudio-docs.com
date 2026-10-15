@@ -3,7 +3,7 @@
 # 🐾 PawnStudio
 *Powerful Code Editor for Pawn Scripting on Android*
 
-[![Version](https://img.shields.io/badge/version-v1.15.0-blue.svg)]()
+[![Version](https://img.shields.io/badge/version-v1.15.1-blue.svg)]()
 [![License](https://img.shields.io/badge/license-Freeare-orange.svg)](https://github.com/Julakk/Pawn-Studio/blob/main/LICENSE)
 [![Discord](https://img.shields.io/badge/discord-join%20community-7289da.svg)](https://discord.gg/82hxdZy6Gf)
 [![Saweria](https://img.shields.io/badge/support-saweria-orange.svg)](https://saweria.co/bangjulak12)
@@ -26,6 +26,7 @@
 - ⚡ **Emmet & Format Kode**: ketik `ul>li*3` di HTML/CSS, plus tombol **Fmt**
 - 👁️ **Preview HTML/CSS/JS**: live preview dan mode split
 - 🟩 **Node.js & npm di HP**: jalankan script `.js` dan pasang paket JavaScript murni
+- 🐍 **Python offline**: jalankan file `.py` langsung di HP (Python 3.12 lewat Pyodide), lengkap dengan panel output dan tombol Stop
 - 🎨 **Pengaturan**: tema editor, ukuran font, dan flag compiler tambahan
 - 📂 **File & Folder Management**: upload file/folder, buat direktori, multi-tab
 - 📱 **Mobile Optimized**: antarmuka dirancang untuk layar sentuh
@@ -36,7 +37,7 @@ Download APK terbaru di tab [**Releases**](https://github.com/Julakk/Pawn-Studio
 
 ## 🚧 Status Proyek
 
-PawnStudio berada dalam **pengembangan aktif** (versi saat ini **v1.15.0**). Kalau ada error compile atau fitur yang tidak berjalan di gamemode kamu, laporkan lewat **Issue** atau Discord, sertakan teks error dari panel Output.
+PawnStudio berada dalam **pengembangan aktif** (versi saat ini **v1.15.1**). Kalau ada error compile atau fitur yang tidak berjalan di gamemode kamu, laporkan lewat **Issue** atau Discord, sertakan teks error dari panel Output.
 
 ## 🤝 Kontribusi
 Kami terbuka untuk laporan *bug* dan ide fitur baru. Silakan:

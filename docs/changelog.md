@@ -6,6 +6,25 @@ description: "Riwayat perubahan PawnStudio per versi, diambil otomatis dari repo
 
 Daftar ini diperbarui otomatis dari [CHANGELOG.md](https://github.com/Julakk/Pawn-Studio/blob/main/CHANGELOG.md). Paket APK ada di [halaman Releases](https://github.com/Julakk/Pawn-Studio/releases).
 
+## v1.15.1 (16 Okt 2026)
+
+### Ditambahkan
+
+- Dukungan Python (.py): file .py dikenali sebagai bahasa Python di editor lengkap dengan syntax highlighting dan indentasi 4 spasi.
+- Jalankan Python langsung di app (Python 3.12 lewat Pyodide 0.26.4, tanpa internet) dengan tombol Run di top bar.
+- Panel Python Output: hasil print, error berwarna merah, tombol Stop, Clear, dan tutup. Menampilkan durasi eksekusi di akhir.
+- Python berjalan di Web Worker, jadi editor tidak macet dan kode yang menggantung (misalnya while True) bisa dihentikan dengan Stop.
+- Tombol Run langsung menjalankan kode tanpa dialog. input() menerima baris kosong, jadi program tidak berhenti dengan EOFError.
+- Pesan error yang jelas saat import library non-stdlib (hanya modul bawaan Python yang tersedia offline).
+- Pyodide ikut dibundel ke APK otomatis lewat GitHub Actions (ukuran APK bertambah sekitar 10 MB).
+
+### Diubah
+
+- Traceback Python hanya menampilkan baris dari kode pengguna, tanpa baris internal Pyodide.
+- Tombol Run Python mengambang dihapus; Run lewat tombol di top bar. Tombol Stop nonaktif kalau tidak ada proses berjalan.
+- README: tambah fitur Python dan item roadmap Python.
+- Versi aplikasi naik ke 1.15.1 (versionCode 47).
+
 ## v1.15.0 (13 Okt 2026)
 
 ### Ditambahkan

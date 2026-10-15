@@ -1,18 +1,18 @@
 {
-  "version": "v1.15.0",
-  "date": "13 Okt 2026",
+  "version": "v1.15.1",
+  "date": "16 Okt 2026",
   "highlights": [
     {
-      "title": "Include bawaan APK",
-      "text": "Sscanf2, YSI, streamer, a_mysql, zcmd, I-ZCMD, Pawn.CMD, Pawn.RakNet, crashdetect, amx_assembly, weapon-config.…"
+      "title": "Dukungan Python",
+      "text": "File .py dikenali sebagai bahasa Python di editor lengkap dengan syntax highlighting dan indentasi 4 spasi."
     },
     {
-      "title": "Panel Ekstensi",
-      "text": "Snippet, tema editor, dan paket include dalam format JSON. Pasang dari file atau repo GitHub…"
+      "title": "Jalankan Python langsung di app",
+      "text": "Jalankan Python langsung di app (Python 3.12 lewat Pyodide 0.26.4, tanpa internet) dengan tombol Run di top bar."
     },
     {
-      "title": "Ekstensi bawaan",
-      "text": "SA-MP Snippets dan Tema Tambahan (Nord, Tokyo Night, Solarized Dark, GitHub Dark)."
+      "title": "Panel Python Output",
+      "text": "Hasil print, error berwarna merah, tombol Stop, Clear, dan tutup. Menampilkan durasi eksekusi di akhir."
     }
   ]
 }

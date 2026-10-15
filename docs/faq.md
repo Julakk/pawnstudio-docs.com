@@ -38,7 +38,7 @@ Bot seharusnya tetap jalan lewat notifikasi **Node.js berjalan**. Cek **Pengatur
 
 ### Apakah Python didukung?
 
-Belum. Dukungan Python statusnya Coming Soon.
+Ya, sejak v1.15.1. File `.py` bisa langsung dijalankan di app lewat tombol Run di top bar (Python 3.12 lewat Pyodide, jalan offline). Yang tersedia hanya modul bawaan Python (stdlib). Library pihak ketiga seperti numpy belum bisa dipakai, dan `input()` menerima baris kosong.
 
 ### Boleh bagikan APK ke teman?
 

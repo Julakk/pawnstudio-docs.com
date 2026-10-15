@@ -10,6 +10,6 @@ description: "Bahasa dan platform yang didukung PawnStudio, yaitu SA-MP, open.mp
 | open.mp (PAWN) | `.pwn`, `.inc`, `.amx` | Tersedia |
 | Node.js | `.js`, `.json` | Tersedia |
 | HTML, CSS, JavaScript | `.html`, `.css`, `.js` | Tersedia |
-| Python | `.py` | Coming Soon |
+| Python | `.py` | Tersedia |
 
 Download aplikasi di [GitHub](https://github.com/Julakk/Pawn-Studio).
