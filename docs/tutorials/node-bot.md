@@ -1,3 +1,7 @@
+---
+description: "Tutorial bikin bot Discord Node.js langsung dari HP memakai PawnStudio."
+---
+
 # Bikin Bot Node.js dari HP
 
 Bikin bot Discord sederhana langsung di PawnStudio, tanpa Termux.

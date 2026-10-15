@@ -1,3 +1,7 @@
+---
+description: "Fitur editor PawnStudio, mulai dari cari dan ganti, Node.js dan npm, preview HTML, sampai pengaturan compiler."
+---
+
 # Fitur Editor
 
 ## Cari & Ganti di semua file

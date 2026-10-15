@@ -1,3 +1,7 @@
+---
+description: "Pilihan versi SA-MP dan dukungan open.mp di PawnStudio, termasuk fungsi khusus 0.3.DL."
+---
+
 # Versi SA-MP & open.mp
 
 Pilihan versi SA-MP ada di **Pengaturan**.

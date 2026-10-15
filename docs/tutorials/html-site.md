@@ -1,3 +1,7 @@
+---
+description: "Tutorial bikin website HTML, CSS, dan JavaScript dari HP dengan live preview PawnStudio."
+---
+
 # Bikin Website HTML dari HP
 
 Bikin halaman web sederhana dan lihat hasilnya langsung.

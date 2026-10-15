@@ -1,3 +1,7 @@
+---
+description: "Tipe file yang dipakai di PawnStudio, yaitu .pwn, .inc, dan .amx."
+---
+
 # Tipe File
 
 | Ekstensi | Fungsi |

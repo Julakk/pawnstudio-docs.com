@@ -1,3 +1,7 @@
+---
+description: "Cara memakai PawnStudio untuk mengedit dan compile script PAWN di Android."
+---
+
 # Cara Pakai
 
 ## Struktur folder yang disarankan

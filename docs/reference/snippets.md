@@ -1,3 +1,7 @@
+---
+description: "Kumpulan snippet PAWN siap pakai untuk SA-MP, mulai dari command, timer, sampai dialog."
+---
+
 # Snippet PAWN
 
 Contoh kode siap pakai untuk SA-MP. Salin, lalu sesuaikan.

@@ -1,3 +1,7 @@
+---
+description: "Pertanyaan yang sering diajukan tentang PawnStudio, mulai dari lisensi, HP yang didukung, sampai bot Node.js."
+---
+
 # FAQ
 
 ### Apakah PawnStudio gratis?

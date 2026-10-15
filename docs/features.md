@@ -1,3 +1,7 @@
+---
+description: "Daftar lengkap fitur PawnStudio, mulai dari editor PAWN, compile di HP, Git, Node.js, sampai preview HTML."
+---
+
 # Fitur
 
 Semua yang ada di PawnStudio, dirancang buat ngoding langsung dari HP.

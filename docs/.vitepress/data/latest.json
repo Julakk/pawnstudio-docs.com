@@ -1,0 +1,18 @@
+{
+  "version": "v1.15.0",
+  "date": "13 Okt 2026",
+  "highlights": [
+    {
+      "title": "Include bawaan APK",
+      "text": "Sscanf2, YSI, streamer, a_mysql, zcmd, I-ZCMD, Pawn.CMD, Pawn.RakNet, crashdetect, amx_assembly, weapon-config.…"
+    },
+    {
+      "title": "Panel Ekstensi",
+      "text": "Snippet, tema editor, dan paket include dalam format JSON. Pasang dari file atau repo GitHub…"
+    },
+    {
+      "title": "Ekstensi bawaan",
+      "text": "SA-MP Snippets dan Tema Tambahan (Nord, Tokyo Night, Solarized Dark, GitHub Dark)."
+    }
+  ]
+}

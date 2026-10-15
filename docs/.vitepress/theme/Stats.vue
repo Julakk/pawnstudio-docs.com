@@ -1,7 +1,8 @@
 <script setup>
 import { ref, onMounted } from 'vue'
+import latest from '../data/latest.json'
 
-const version = ref('v1.15.0')
+const version = ref(latest.version)
 
 onMounted(async () => {
   try {

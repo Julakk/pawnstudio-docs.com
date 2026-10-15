@@ -1,3 +1,7 @@
+---
+description: "Langkah compile gamemode SA-MP pertama di PawnStudio sampai jadi file .amx."
+---
+
 # Compile Gamemode Pertama
 
 Langkah dari buka proyek sampai dapat file `.amx`.

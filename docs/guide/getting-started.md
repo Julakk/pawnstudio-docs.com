@@ -1,3 +1,7 @@
+---
+description: "Panduan mulai cepat PawnStudio, dari install APK sampai membuka proyek pertama."
+---
+
 # Mulai Cepat
 
 ## Install

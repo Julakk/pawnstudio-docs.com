@@ -1,3 +1,7 @@
+---
+description: "Bahasa dan platform yang didukung PawnStudio, yaitu SA-MP, open.mp, Node.js, dan HTML CSS JavaScript."
+---
+
 # Bahasa & Platform
 
 | Bahasa / Platform | Ekstensi | Status |

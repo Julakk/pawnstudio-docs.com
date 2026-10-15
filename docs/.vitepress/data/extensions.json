@@ -1,0 +1,7 @@
+{
+  "builtin": [
+    { "name": "SA-MP Snippets", "type": "snippet", "description": "Kumpulan snippet siap pakai untuk scripting SA-MP.", "author": "PawnStudio" },
+    { "name": "Tema Tambahan", "type": "tema", "description": "Empat tema editor: Nord, Tokyo Night, Solarized Dark, dan GitHub Dark.", "author": "PawnStudio" }
+  ],
+  "community": []
+}

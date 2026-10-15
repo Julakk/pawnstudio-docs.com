@@ -1,3 +1,7 @@
+---
+description: "Daftar error compile PAWN yang umum di PawnStudio beserta penyebab dan solusinya."
+---
+
 # Troubleshooting
 
 Salin teks error dari panel Output, lalu cocokkan dengan tabel di bawah.

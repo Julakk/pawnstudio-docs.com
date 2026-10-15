@@ -53,11 +53,7 @@ features:
 
 <p class="sub">Yang baru di rilis terbaru.</p>
 
-<div class="platform-grid">
-<div class="platform"><div class="ico"><svg viewBox="0 0 24 24"><line x1="16.5" y1="9.4" x2="7.5" y2="4.21"/><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></div><h3>Include Bawaan</h3><p>sscanf2, YSI, streamer, zcmd, dan lainnya sudah ada di dalam APK.</p><span class="badge ver">v1.15.0</span></div>
-<div class="platform"><div class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg></div><h3>Panel Ekstensi</h3><p>Pasang snippet, tema editor, dan paket include dari file atau repo GitHub.</p><span class="badge ver">v1.15.0</span></div>
-<div class="platform"><div class="ico"><svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><polyline points="9 11 11 13 15 9"/></svg></div><h3>Cek HP</h3><p>Cek kompatibilitas HP lo: compiler, Node.js, Git, dan izin yang dibutuhkan.</p><span class="badge ver">v1.14.1</span></div>
-</div>
+<LatestRelease />
 
 <div class="more">
 

@@ -1,3 +1,7 @@
+---
+description: "Download PawnStudio untuk Android. Persyaratan, cara install, dan informasi lisensi."
+---
+
 # Download
 
 <div class="cta">

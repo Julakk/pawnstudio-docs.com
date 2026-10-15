@@ -1,3 +1,7 @@
+---
+description: "Cara memakai Git langsung dari HP di PawnStudio, termasuk commit, push, dan pull."
+---
+
 # Pakai Git dari HP
 
 PawnStudio punya Git bawaan, jadi lo nggak perlu Termux.

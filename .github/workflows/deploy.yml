@@ -3,6 +3,8 @@ name: Deploy docs
 on:
   push:
     branches: [main]
+  schedule:
+    - cron: '0 */6 * * *'
   workflow_dispatch:
 
 permissions:
@@ -22,6 +24,9 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
+      - name: Ambil changelog terbaru
+        run: node scripts/gen-changelog.mjs
+        continue-on-error: true
       - run: npm install
       - run: npm run build
       - uses: actions/configure-pages@v4

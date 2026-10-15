@@ -1,3 +1,7 @@
+---
+description: "Tentang PawnStudio, cara melaporkan bug, usul fitur, dan mendukung pengembangan."
+---
+
 # Tentang & Kontribusi
 
 ## Tentang PawnStudio

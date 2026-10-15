@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://julakk.github.io/pawnstudio-docs.com/sitemap.xml
