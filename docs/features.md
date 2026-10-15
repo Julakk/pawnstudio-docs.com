@@ -1,5 +1,5 @@
 ---
-description: "Daftar lengkap fitur PawnStudio, mulai dari editor PAWN, compile di HP, Git, Node.js, sampai preview HTML."
+description: "Daftar lengkap fitur PawnStudio, mulai dari editor PAWN, compile di HP, Git, Node.js, Python, sampai preview HTML."
 ---
 
 # Fitur
@@ -16,6 +16,7 @@ Semua yang ada di PawnStudio, dirancang buat ngoding langsung dari HP.
 <div class="platform"><div class="ico"><svg viewBox="0 0 24 24"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="14" y2="12"/><line x1="4" y1="18" x2="18" y2="18"/></svg></div><h3>Emmet & Format Kode</h3><p>Ketik ul>li*3 di HTML/CSS, plus tombol Fmt buat merapikan kode.</p></div>
 <div class="platform"><div class="ico"><svg viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div><h3>Preview HTML/CSS/JS</h3><p>Live preview dan mode split buat ngelihat hasil langsung.</p></div>
 <div class="platform"><div class="ico"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg></div><h3>Node.js & npm</h3><p>Jalankan script .js dan pasang paket JavaScript murni di HP.</p></div>
+<div class="platform"><div class="ico"><svg viewBox="0 0 24 24"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg></div><h3>Python Offline</h3><p>Jalankan file .py langsung di HP (Python 3.12 lewat Pyodide), lengkap dengan panel output dan tombol Stop.</p></div>
 <div class="platform"><div class="ico"><svg viewBox="0 0 24 24"><line x1="4" y1="21" x2="4" y2="14"/><line x1="4" y1="10" x2="4" y2="3"/><line x1="12" y1="21" x2="12" y2="12"/><line x1="12" y1="8" x2="12" y2="3"/><line x1="20" y1="21" x2="20" y2="16"/><line x1="20" y1="12" x2="20" y2="3"/><line x1="1" y1="14" x2="7" y2="14"/><line x1="9" y1="8" x2="15" y2="8"/><line x1="17" y1="16" x2="23" y2="16"/></svg></div><h3>Pengaturan</h3><p>Tema editor, ukuran font, dan flag compiler tambahan.</p></div>
 <div class="platform"><div class="ico"><svg viewBox="0 0 24 24"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg></div><h3>File & Folder</h3><p>Upload file atau folder, buat direktori, dan buka banyak tab.</p></div>
 <div class="platform"><div class="ico"><svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div><h3>Mobile Optimized</h3><p>Antarmuka dirancang khusus untuk layar sentuh.</p></div>
