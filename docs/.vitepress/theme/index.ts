@@ -4,6 +4,8 @@ import Stats from './Stats.vue'
 import Footer from './Footer.vue'
 import LatestRelease from './LatestRelease.vue'
 import ExtensionCatalog from './ExtensionCatalog.vue'
+import IssueButtons from './IssueButtons.vue'
+import MediaKit from './MediaKit.vue'
 import './custom.css'
 
 export default {
@@ -16,5 +18,7 @@ export default {
   enhanceApp({ app }) {
     app.component('LatestRelease', LatestRelease)
     app.component('ExtensionCatalog', ExtensionCatalog)
+    app.component('IssueButtons', IssueButtons)
+    app.component('MediaKit', MediaKit)
   }
 }
