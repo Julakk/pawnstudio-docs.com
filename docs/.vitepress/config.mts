@@ -58,9 +58,5 @@ export default defineConfig({
       pattern: 'https://github.com/Julakk/pawnstudio-docs.com/edit/main/docs/:path',
       text: 'Edit halaman ini di GitHub'
     },
-    footer: {
-      message: 'PawnStudio Freeware License. Gratis dipakai, bukan open source.',
-      copyright: 'Copyright © 2026 Julak Junior'
-    }
   }
 })
