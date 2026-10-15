@@ -3,6 +3,7 @@ import { withBase, useData } from 'vitepress'
 
 const { frontmatter } = useData()
 
+const logoSrc = withBase('/logo.png')
 const REPO = 'https://github.com/Julakk/Pawn-Studio'
 
 const nav = [
@@ -42,7 +43,7 @@ const legal = [
   <footer class="site-footer" :class="{ 'has-sidebar': frontmatter.layout !== 'home' }">
     <div class="sf-inner">
       <div class="sf-brand">
-        <b>PawnStudio</b>
+        <img class="sf-logo" :src="logoSrc" alt="PawnStudio" /><b>PawnStudio</b>
         <p>Dibuat dari HP, untuk yang ngoding dari HP.</p>
       </div>
 

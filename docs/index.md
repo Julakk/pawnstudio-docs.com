@@ -2,6 +2,9 @@
 layout: home
 
 hero:
+  image:
+    src: /logo.png
+    alt: PawnStudio
   name: PawnStudio
   text: Ngoding dari HP, tanpa laptop
   tagline: IDE mobile untuk SA-MP, open.mp, Node.js, dan web. Tulis, edit, dan compile langsung di Android.

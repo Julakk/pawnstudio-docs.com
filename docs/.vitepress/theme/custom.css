@@ -300,3 +300,13 @@
     padding-right: 64px;
   }
 }
+
+.sf-logo {
+  width: 44px;
+  height: 44px;
+  display: block;
+  margin-bottom: 10px;
+}
+.VPNavBarTitle .logo {
+  height: 28px;
+}
