@@ -14,5 +14,19 @@
       "title": "Ganti per baris di mode regex",
       "text": "Sekarang benar untuk pola dengan lookahead atau anchor, dan mendukung $1, $& serta $<nama>."
     }
+  ],
+  "highlights_en": [
+    {
+      "title": "Find & Replace across all files",
+      "text": ".py files (and .ts, .tsx, .jsx, .java, .kt, .gradle, .properties, .toml, .csv) are now searched when the extension field is empty."
+    },
+    {
+      "title": "Search results are no longer stale",
+      "text": "The file content cache is limited to 30 seconds and the file list to 60 seconds."
+    },
+    {
+      "title": "Per-line replace in regex mode",
+      "text": "Now correct for patterns with lookahead or anchors, and supports $1, $& and $<name>."
+    }
   ]
 }

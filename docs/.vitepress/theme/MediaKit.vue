@@ -1,27 +1,42 @@
 <script setup>
-import { withBase } from 'vitepress'
+import { computed } from 'vue'
+import { withBase, useData } from 'vitepress'
 
-const files = [
-  { name: 'Logo', desc: 'PNG transparan, 512 x 512', file: '/logo.png' },
-  { name: 'Ikon kecil', desc: 'PNG transparan, 192 x 192', file: '/icon-192.png' },
-  { name: 'Gambar preview', desc: 'PNG, 1200 x 630', file: '/og-image.png' }
-]
+const { lang } = useData()
+const en = computed(() => lang.value.startsWith('en'))
 
-const colors = [
-  { name: 'Ungu', hex: '#AF45F6' },
-  { name: 'Biru', hex: '#265DEB' },
-  { name: 'Ungu pion', hex: '#7E35E3' },
-  { name: 'Putih', hex: '#FAFAFC' },
-  { name: 'Hitam', hex: '#040407' },
-  { name: 'Aksen website', hex: '#5F7DF5' }
-]
+const files = computed(() =>
+  en.value
+    ? [
+        { name: 'Logo', desc: 'Transparent PNG, 512 x 512', file: '/logo.png' },
+        { name: 'Small icon', desc: 'Transparent PNG, 192 x 192', file: '/icon-192.png' },
+        { name: 'Preview image', desc: 'PNG, 1200 x 630', file: '/og-image.png' }
+      ]
+    : [
+        { name: 'Logo', desc: 'PNG transparan, 512 x 512', file: '/logo.png' },
+        { name: 'Ikon kecil', desc: 'PNG transparan, 192 x 192', file: '/icon-192.png' },
+        { name: 'Gambar preview', desc: 'PNG, 1200 x 630', file: '/og-image.png' }
+      ]
+)
+
+const colors = computed(() => [
+  { name: en.value ? 'Purple' : 'Ungu', hex: '#AF45F6' },
+  { name: en.value ? 'Blue' : 'Biru', hex: '#265DEB' },
+  { name: en.value ? 'Pawn purple' : 'Ungu pion', hex: '#7E35E3' },
+  { name: en.value ? 'White' : 'Putih', hex: '#FAFAFC' },
+  { name: en.value ? 'Black' : 'Hitam', hex: '#040407' },
+  { name: en.value ? 'Website accent' : 'Aksen website', hex: '#5F7DF5' }
+])
+
+const altDark = computed(() => (en.value ? 'PawnStudio logo on a dark background' : 'Logo PawnStudio di background gelap'))
+const altLight = computed(() => (en.value ? 'PawnStudio logo on a light background' : 'Logo PawnStudio di background terang'))
 </script>
 
 <template>
   <div class="mk">
     <div class="mk-preview">
-      <div class="mk-box dark"><img :src="withBase('/logo.png')" alt="Logo PawnStudio di background gelap" /></div>
-      <div class="mk-box light"><img :src="withBase('/logo.png')" alt="Logo PawnStudio di background terang" /></div>
+      <div class="mk-box dark"><img :src="withBase('/logo.png')" :alt="altDark" /></div>
+      <div class="mk-box light"><img :src="withBase('/logo.png')" :alt="altLight" /></div>
     </div>
 
     <div class="mk-files">

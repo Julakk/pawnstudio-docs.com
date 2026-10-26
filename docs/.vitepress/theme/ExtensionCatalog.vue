@@ -1,10 +1,25 @@
 <script setup>
+import { computed } from 'vue'
+import { useData } from 'vitepress'
 import data from '../data/extensions.json'
 
 const props = defineProps({ list: { type: String, default: 'community' } })
-const items = data[props.list] || []
+const { lang } = useData()
+const en = computed(() => lang.value.startsWith('en'))
 
-const label = { snippet: 'Snippet', tema: 'Tema', include: 'Paket Include' }
+const items = computed(() =>
+  (data[props.list] || []).map((x) => ({
+    ...x,
+    name: (en.value && x.name_en) || x.name,
+    description: (en.value && x.description_en) || x.description
+  }))
+)
+
+const labelId = { snippet: 'Snippet', tema: 'Tema', include: 'Paket Include' }
+const labelEn = { snippet: 'Snippet', tema: 'Theme', include: 'Include Pack' }
+const label = computed(() => (en.value ? labelEn : labelId))
+const by = computed(() => (en.value ? 'by' : 'oleh'))
+
 const icon = {
   snippet: '<polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>',
   tema: '<circle cx="12" cy="12" r="10"/><path d="M12 2a10 10 0 0 0 0 20z"/>',
@@ -18,10 +33,14 @@ const icon = {
       <div class="ico"><svg viewBox="0 0 24 24" v-html="icon[x.type] || icon.snippet"></svg></div>
       <h3>{{ x.name }}</h3>
       <p>{{ x.description }}</p>
-      <p v-if="x.author" class="ext-meta">oleh {{ x.author }}</p>
+      <p v-if="x.author" class="ext-meta">{{ by }} {{ x.author }}</p>
       <span class="badge ver">{{ label[x.type] || x.type }}</span>
       <a v-if="x.repo" :href="'https://github.com/' + x.repo" target="_blank" rel="noopener">{{ x.repo }}</a>
     </div>
+  </div>
+  <div v-else-if="en" class="platform empty">
+    <h3>No community extensions yet</h3>
+    <p>Be the first! Build your extension and submit it using the steps at the bottom of this page.</p>
   </div>
   <div v-else class="platform empty">
     <h3>Belum ada ekstensi komunitas</h3>

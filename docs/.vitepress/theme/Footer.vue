@@ -1,18 +1,58 @@
 <script setup>
+import { computed } from 'vue'
 import { withBase, useData } from 'vitepress'
 
-const { frontmatter } = useData()
+const { frontmatter, lang } = useData()
+
+const en = computed(() => lang.value.startsWith('en'))
+const p = computed(() => (en.value ? '/en' : ''))
 
 const logoSrc = withBase('/logo.png')
 const REPO = 'https://github.com/Julakk/Pawn-Studio'
 
-const nav = [
-  { text: 'Fitur', link: withBase('/features') },
-  { text: 'Download', link: withBase('/download') },
-  { text: 'Panduan', link: withBase('/guide/getting-started') },
-  { text: 'FAQ', link: withBase('/faq') },
-  { text: 'Changelog', link: withBase('/changelog') }
-]
+const T = {
+  id: {
+    tagline: 'Dibuat dari HP, untuk yang ngoding dari HP.',
+    navTitle: 'Navigasi',
+    communityTitle: 'Komunitas',
+    legalTitle: 'Legal',
+    features: 'Fitur',
+    download: 'Download',
+    guide: 'Panduan',
+    faq: 'FAQ',
+    changelog: 'Changelog',
+    license: 'Lisensi',
+    notices: 'Third-Party Notices',
+    about: 'Tentang dan Kontribusi',
+    disclaimer: 'PawnStudio tidak berafiliasi dengan SA-MP, open.mp, Discord, GitHub, atau Node.js. Semua nama dan merek dagang adalah milik masing-masing pemiliknya.',
+    copyright: 'PawnStudio Freeware License. Gratis dipakai, bukan open source.'
+  },
+  en: {
+    tagline: 'Built on a phone, for people who code on phones.',
+    navTitle: 'Navigation',
+    communityTitle: 'Community',
+    legalTitle: 'Legal',
+    features: 'Features',
+    download: 'Download',
+    guide: 'Guide',
+    faq: 'FAQ',
+    changelog: 'Changelog',
+    license: 'License',
+    notices: 'Third-Party Notices',
+    about: 'About & Contributing',
+    disclaimer: 'PawnStudio is not affiliated with SA-MP, open.mp, Discord, GitHub, or Node.js. All names and trademarks belong to their respective owners.',
+    copyright: 'PawnStudio Freeware License. Free to use, not open source.'
+  }
+}
+const t = computed(() => (en.value ? T.en : T.id))
+
+const nav = computed(() => [
+  { text: t.value.features, link: withBase(p.value + '/features') },
+  { text: t.value.download, link: withBase(p.value + '/download') },
+  { text: t.value.guide, link: withBase(p.value + '/guide/getting-started') },
+  { text: t.value.faq, link: withBase(p.value + '/faq') },
+  { text: t.value.changelog, link: withBase(p.value + '/changelog') }
+])
 
 const community = [
   {
@@ -32,11 +72,11 @@ const community = [
   }
 ]
 
-const legal = [
-  { text: 'Lisensi', link: REPO + '/blob/main/LICENSE' },
-  { text: 'Third-Party Notices', link: REPO + '/blob/main/THIRD_PARTY_NOTICES.md' },
-  { text: 'Tentang dan Kontribusi', link: withBase('/about') }
-]
+const legal = computed(() => [
+  { text: t.value.license, link: REPO + '/blob/main/LICENSE' },
+  { text: t.value.notices, link: REPO + '/blob/main/THIRD_PARTY_NOTICES.md' },
+  { text: t.value.about, link: withBase(p.value + '/about') }
+])
 </script>
 
 <template>
@@ -44,16 +84,16 @@ const legal = [
     <div class="sf-inner">
       <div class="sf-brand">
         <img class="sf-logo" :src="logoSrc" alt="PawnStudio" /><b>PawnStudio</b>
-        <p>Dibuat dari HP, untuk yang ngoding dari HP.</p>
+        <p>{{ t.tagline }}</p>
       </div>
 
       <div class="sf-col">
-        <h4>Navigasi</h4>
+        <h4>{{ t.navTitle }}</h4>
         <a v-for="i in nav" :key="i.text" :href="i.link">{{ i.text }}</a>
       </div>
 
       <div class="sf-col">
-        <h4>Komunitas</h4>
+        <h4>{{ t.communityTitle }}</h4>
         <a v-for="i in community" :key="i.text" :href="i.link" target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" v-html="i.icon"></svg>
           {{ i.text }}
@@ -61,14 +101,14 @@ const legal = [
       </div>
 
       <div class="sf-col">
-        <h4>Legal</h4>
+        <h4>{{ t.legalTitle }}</h4>
         <a v-for="i in legal" :key="i.text" :href="i.link">{{ i.text }}</a>
       </div>
     </div>
 
     <div class="sf-bottom">
-      <p>PawnStudio tidak berafiliasi dengan SA-MP, open.mp, Discord, GitHub, atau Node.js. Semua nama dan merek dagang adalah milik masing-masing pemiliknya.</p>
-      <p>PawnStudio Freeware License. Gratis dipakai, bukan open source. &copy; 2026 Julak Junior</p>
+      <p>{{ t.disclaimer }}</p>
+      <p>{{ t.copyright }} &copy; 2026 Julak Junior</p>
     </div>
   </footer>
 </template>

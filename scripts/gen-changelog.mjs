@@ -4,6 +4,7 @@ import { dirname, resolve } from 'node:path'
 
 const here = dirname(fileURLToPath(import.meta.url))
 const OUT_MD = resolve(here, '../docs/changelog.md')
+const OUT_MD_EN = resolve(here, '../docs/en/changelog.md')
 const OUT_JSON = resolve(here, '../docs/.vitepress/data/latest.json')
 const SRC = 'https://raw.githubusercontent.com/Julakk/Pawn-Studio/main/CHANGELOG.md'
 const BULAN = ['Jan', 'Feb', 'Mar', 'Apr', 'Mei', 'Jun', 'Jul', 'Agu', 'Sep', 'Okt', 'Nov', 'Des']
@@ -69,10 +70,15 @@ async function main() {
   const rilis = versions.filter((v) => v.ver.toLowerCase() !== 'unreleased')
   if (!rilis.length) throw new Error('Tidak ada versi ditemukan')
 
-  let md = '---\ndescription: "Riwayat perubahan PawnStudio per versi, diambil otomatis dari repo resmi."\n---\n\n# Changelog\n\n'
-  md +=
+  const headId =
+    '---\ndescription: "Riwayat perubahan PawnStudio per versi, diambil otomatis dari repo resmi."\n---\n\n# Changelog\n\n' +
     'Daftar ini diperbarui otomatis dari [CHANGELOG.md](https://github.com/Julakk/Pawn-Studio/blob/main/CHANGELOG.md). ' +
     'Paket APK ada di [halaman Releases](https://github.com/Julakk/Pawn-Studio/releases).\n\n'
+  const headEn =
+    '---\ndescription: "PawnStudio release history by version, pulled automatically from the official repository."\n---\n\n# Changelog\n\n' +
+    '::: info\nThis list is updated automatically from the official [CHANGELOG.md](https://github.com/Julakk/Pawn-Studio/blob/main/CHANGELOG.md). ' +
+    'The release notes themselves are written in Indonesian. APK packages are on the [Releases page](https://github.com/Julakk/Pawn-Studio/releases).\n:::\n\n'
+  let md = ''
 
   for (const v of rilis) {
     md += `## v${v.ver}${v.date ? ' (' + v.date + ')' : ''}\n\n`
@@ -123,7 +129,18 @@ async function main() {
     })
 
   mkdirSync(dirname(OUT_JSON), { recursive: true })
-  writeFileSync(OUT_MD, md)
+  const EN = {
+    Ditambahkan: 'Added',
+    Diubah: 'Changed',
+    Diperbaiki: 'Fixed',
+    Dihapus: 'Removed',
+    'Masalah yang diketahui': 'Known issues',
+    Catatan: 'Notes'
+  }
+  const mdEn = md.replace(/^### (.+)$/gm, (m0, h) => '### ' + (EN[h.trim()] || h))
+  mkdirSync(dirname(OUT_MD_EN), { recursive: true })
+  writeFileSync(OUT_MD, headId + md)
+  writeFileSync(OUT_MD_EN, headEn + mdEn)
   writeFileSync(OUT_JSON, JSON.stringify({ version: 'v' + latest.ver, date: latest.date, highlights }, null, 2) + '\n')
   console.log(`OK: ${rilis.length} versi, terbaru v${latest.ver}`)
 }

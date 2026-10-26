@@ -1,8 +1,16 @@
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, computed, onMounted } from 'vue'
+import { useData } from 'vitepress'
 import latest from '../data/latest.json'
 
+const { lang } = useData()
 const version = ref(latest.version)
+
+const labels = computed(() =>
+  lang.value.startsWith('en')
+    ? { version: 'Latest version', platforms: 'Supported platforms', offline: 'Works offline', free: 'Free', freeSub: 'To use' }
+    : { version: 'Versi terbaru', platforms: 'Platform didukung', offline: 'Bisa offline', free: 'Gratis', freeSub: 'Dipakai' }
+)
 
 onMounted(async () => {
   try {
@@ -17,9 +25,9 @@ onMounted(async () => {
 
 <template>
   <div class="stats">
-    <div class="stat"><b>{{ version }}</b><span>Versi terbaru</span></div>
-    <div class="stat"><b>5</b><span>Platform didukung</span></div>
-    <div class="stat"><b>100%</b><span>Bisa offline</span></div>
-    <div class="stat"><b>Gratis</b><span>Dipakai</span></div>
+    <div class="stat"><b>{{ version }}</b><span>{{ labels.version }}</span></div>
+    <div class="stat"><b>5</b><span>{{ labels.platforms }}</span></div>
+    <div class="stat"><b>100%</b><span>{{ labels.offline }}</span></div>
+    <div class="stat"><b>{{ labels.free }}</b><span>{{ labels.freeSub }}</span></div>
   </div>
 </template>
