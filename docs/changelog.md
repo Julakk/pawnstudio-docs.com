@@ -2,6 +2,74 @@
 
 Semua perubahan penting pada project PawnStudio dicatat di file ini.
 
+## [1.16.6] - 2026-10-26
+
+### Diperbaiki
+
+- Cari & Ganti semua file: file .py (juga .ts, .tsx, .jsx, .java, .kt, .gradle, .properties, .toml, .csv) sekarang ikut dicari saat kolom ekstensi kosong.
+- Hasil pencarian tidak lagi basi: cache isi file dibatasi 30 detik dan daftar file 60 detik.
+- Ganti per baris di mode regex sekarang benar untuk pola dengan lookahead atau anchor, dan mendukung $1, $& serta $&lt;nama&gt;.
+- Pola regex yang cocok dengan teks kosong ditolak sebelum mencari.
+- Mengganti isi file yang sedang terbuka di editor sekarang bisa di-undo, dan cache yang melewati batas tidak lagi menyisakan isi lama.
+- Ganti Semua memberi peringatan bila hasil dibatasi, menampilkan progres, dan melaporkan file yang gagal.
+
+### Diubah
+
+- Tampilan panel: opsi berlabel jelas, kolom ekstensi di baris sendiri, tombol Ganti Semua nonaktif sampai ada hasil, panah buka/tutup per file, hasil terurut per path, dan teks petunjuk di awal.
+- Ganti per baris hanya memindai ulang file itu, jadi daftar hasil tidak lagi kembali ke atas.
+- Versi aplikasi naik ke 1.16.6 (versionCode 55).
+
+## [1.16.5] - 2026-10-26
+
+### Diubah
+
+- Python: tombol Run langsung menjalankan kode tanpa dialog.
+- Python: `input()` sekarang interaktif lewat kolom isian di panel Python Output. Program meminta nilai satu per satu dan dijalankan ulang dari awal setiap nilai dikirim, jadi kode yang memakai random atau waktu bisa menghasilkan keluaran berbeda di tiap pengulangan.
+- Versi aplikasi naik ke 1.16.5 (versionCode 54).
+
+## [1.16.4] - 2026-10-26
+
+### Diubah
+
+- Python: tombol Run langsung menjalankan kode tanpa dialog input. Dialog "Program ini pakai input()" dari 1.16.3 dihapus.
+- Python: program yang memanggil `input()` berhenti dengan EOFError dan pesan penjelasan, karena input interaktif belum didukung.
+- Versi aplikasi naik ke 1.16.4 (versionCode 53).
+
+## [1.16.3] - 2026-10-26
+
+### Diperbaiki
+
+- Python: `input()` sekarang berhenti dengan EOFError saat nilai input habis, tidak lagi berputar tanpa akhir.
+- Python: setiap run memakai namespace baru, jadi variabel dan import dari run sebelumnya tidak bocor ke run berikutnya.
+
+### Ditambahkan
+
+- Python: dialog input muncul sebelum run bila kode memakai `input()` (nilai dipisahkan dengan |).
+- Git: daftar cabang, buat cabang baru, dan pindah cabang. Ketuk nama cabang di header panel Git.
+- Git: tombol Buang untuk membatalkan perubahan file terpilih (file yang belum dilacak dihapus permanen, dengan konfirmasi).
+- Versi aplikasi naik ke 1.16.3 (versionCode 52).
+
+## [1.16.2] - 2026-10-26
+
+### Diperbaiki
+
+- Status bar di layar portrait tidak lagi saling tumpuk (badge warning dan info indentasi); sekarang tampil dalam dua baris.
+- Activity bar di layar landscape: scrollbar dan efek overscroll/refresh dihilangkan, dan tombol dikecilkan supaya muat.
+- Chip nama project di header mengikuti lebar teks dan dipotong dengan ellipsis bila terlalu panjang; tanda "—" di depan nama dihapus.
+- Sidebar yang ditutup tidak lagi membocorkan tombol refresh/collapse ke atas activity bar di layar landscape.
+- Tinggi status bar di layar portrait dikunci untuk dua baris sehingga teks tidak terpotong.
+- Versi aplikasi naik ke 1.16.2 (versionCode 51).
+
+## [1.16.1] - 2026-10-23
+
+### Diubah
+
+- Layar awal: logo PawnStudio menggantikan ikon file generik, plus tombol baru "Buka Folder" dan "Git".
+- Explorer: file aktif di OPEN EDITORS sekarang abu-abu halus, sehingga sorotan biru tebal hanya ada di pohon file (WORKSPACE) dan tidak lagi dobel.
+- Status bar: menampilkan indentasi (Spasi/Tab) dan akhir baris (LF/CRLF) file aktif. Di layar sempit (maks 480 px) nama file di status bar disembunyikan karena sudah ada di tab.
+- Minimap otomatis dimatikan di layar sempit (di bawah 480 px) walau diaktifkan di Pengaturan, dan dinyalakan lagi saat layar melebar, supaya area kode lebih luas.
+- Versi aplikasi naik ke 1.16.1 (versionCode 50).
+
 ## [1.16.0] - 2026-10-22
 
 ### Ditambahkan

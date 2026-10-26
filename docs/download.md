@@ -2,6 +2,10 @@
 description: "Download PawnStudio untuk Android. Persyaratan, cara install, dan informasi lisensi."
 ---
 
+<script setup>
+import latest from './.vitepress/data/latest.json'
+</script>
+
 # Download
 
 <div class="cta">
