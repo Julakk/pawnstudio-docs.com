@@ -18,7 +18,7 @@ onMounted(async () => {
 <template>
   <div class="stats">
     <div class="stat"><b>{{ version }}</b><span>Versi terbaru</span></div>
-    <div class="stat"><b>4</b><span>Platform didukung</span></div>
+    <div class="stat"><b>5</b><span>Platform didukung</span></div>
     <div class="stat"><b>100%</b><span>Bisa offline</span></div>
     <div class="stat"><b>Gratis</b><span>Dipakai</span></div>
   </div>

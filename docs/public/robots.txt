@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://julakk.github.io/pawnstudio-docs.com/sitemap.xml
+Sitemap: https://pawnstudio-docs-com.vercel.app/sitemap.xml

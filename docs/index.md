@@ -116,6 +116,6 @@ features:
 <div class="cta">
 <h3>Siap ngoding dari HP?</h3>
 <p>Download PawnStudio dan mulai bikin proyek pertama lo.</p>
-<a class="btn" href="/pawnstudio-docs.com/download">Download</a>
-<a class="btn alt" href="/pawnstudio-docs.com/features">Lihat Semua Fitur</a>
+<a class="btn" href="/download">Download</a>
+<a class="btn alt" href="/features">Lihat Semua Fitur</a>
 </div>

@@ -25,6 +25,6 @@ Semua yang ada di PawnStudio, dirancang buat ngoding langsung dari HP.
 <div class="cta">
 <h3>Udah kepincut?</h3>
 <p>Download PawnStudio dan coba sendiri.</p>
-<a class="btn" href="/pawnstudio-docs.com/download">Download</a>
-<a class="btn alt" href="/pawnstudio-docs.com/guide/getting-started">Mulai Cepat</a>
+<a class="btn" href="/download">Download</a>
+<a class="btn alt" href="/guide/getting-started">Mulai Cepat</a>
 </div>
