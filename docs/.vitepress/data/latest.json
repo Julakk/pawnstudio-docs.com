@@ -1,18 +1,18 @@
 {
-  "version": "v1.15.1",
-  "date": "16 Okt 2026",
+  "version": "v1.16.6",
+  "date": "26 Okt 2026",
   "highlights": [
     {
-      "title": "Dukungan Python",
-      "text": "File .py dikenali sebagai bahasa Python di editor lengkap dengan syntax highlighting dan indentasi 4 spasi."
+      "title": "Cari & Ganti semua file",
+      "text": "File .py (juga .ts, .tsx, .jsx, .java, .kt, .gradle, .properties, .toml, .csv) sekarang ikut dicari saat kolom ekstensi kosong."
     },
     {
-      "title": "Jalankan Python langsung di app",
-      "text": "Jalankan Python langsung di app (Python 3.12 lewat Pyodide 0.26.4, tanpa internet) dengan tombol Run di top bar."
+      "title": "Hasil pencarian tidak lagi basi",
+      "text": "Cache isi file dibatasi 30 detik dan daftar file 60 detik."
     },
     {
-      "title": "Panel Python Output",
-      "text": "Hasil print, error berwarna merah, tombol Stop, Clear, dan tutup. Menampilkan durasi eksekusi di akhir."
+      "title": "Ganti per baris di mode regex",
+      "text": "Sekarang benar untuk pola dengan lookahead atau anchor, dan mendukung $1, $& serta $<nama>."
     }
   ]
 }
