@@ -8,7 +8,49 @@ description: "PawnStudio release history by version, pulled automatically from t
 This list is updated automatically from the official [CHANGELOG.md](https://github.com/Julakk/Pawn-Studio/blob/main/CHANGELOG.md). The release notes themselves are written in Indonesian. APK packages are on the [Releases page](https://github.com/Julakk/Pawn-Studio/releases).
 :::
 
-## [1.16.6] - 2026-10-26
+## v1.18.0 (13 Nov 2026)
+
+### Added
+
+- pip di dalam app. Tombol npm di Explorer sekarang juga menerima `pip install nama_paket`, `pip uninstall`, `pip list`, dan `pip install -r requirements.txt`. Paket dipasang ke folder privat app dan langsung bisa di-import.
+- Yang bisa dipasang: paket Python murni dari PyPI dan paket native yang punya wheel Android arm64 (Python 3.11) di repo Chaquopy. Paket yang butuh kompilasi tidak didukung.
+- Script yang meng-import paket hasil pip otomatis jalan lewat Python native.
+
+### Changed
+
+- Versi aplikasi naik ke 1.18.0 (versionCode 58). `packaging` ikut dibundel buat resolver pip.
+
+## v1.17.0 (13 Nov 2026)
+
+### Added
+
+- Python native di dalam APK (Chaquopy, Python 3.11). Script yang `import discord`, `aiohttp`, atau `requests` sekarang jalan native, jadi bot Discord (`discord.py`) bisa dijalankan langsung dari app. Kode Python lain tetap jalan lewat Pyodide seperti biasa.
+- `discord.py`, `aiohttp`, `requests`, dan `certifi` ikut dibundel di APK.
+- Script Python native jalan di proses terpisah (`:py`) lewat foreground service, dengan notifikasi dan tombol Stop. Stop mematikan prosesnya, jadi bot yang nge-block tetap berhenti.
+- Output live di panel Output, log tersimpan, dan UI tersambung lagi ke proses yang masih jalan setelah app dibuka ulang.
+- Paksa mode manual dengan komentar `# ps:native` atau `# ps:web` di file Python.
+- Contoh bot Discord di `docs/examples/discord_bot.py`.
+
+### Changed
+
+- Versi aplikasi naik ke 1.17.0 (versionCode 57). Ukuran APK bertambah karena runtime Python ikut dibundel.
+- Workflow build memasang Python 3.11 (dipakai Chaquopy waktu build).
+
+## v1.16.7 (1 Nov 2026)
+
+### Fixed
+
+- Cari & Ganti semua file (mode regex): pola dengan `^` atau `$` sekarang ketemu di baris mana pun, tidak cuma di awal atau akhir file.
+- Ganti Semua sekarang bekerja per baris, sama seperti Cari, jadi pola `^` dan `$` ikut terganti dan pola seperti `\s` tidak lagi menyambung antar baris.
+- Daftar RECENT di layar awal: nama file dengan karakter `<`, `>` atau `&` tidak lagi merusak tampilan.
+- Membuka file: isi dibaca apa adanya. Sebelumnya semua baris dipaksa jadi LF dan newline ditambahkan di akhir file, jadi file CRLF (mis. gamemode dari Windows) berubah seluruhnya saat disimpan dan muncul di Git sebagai perubahan penuh.
+- package-lock.json ikut sinkron ke versi aplikasi (sebelumnya tertinggal di 1.16.1).
+
+### Changed
+
+- Versi aplikasi naik ke 1.16.7 (versionCode 56).
+
+## v1.16.6 (26 Okt 2026)
 
 ### Fixed
 
@@ -25,7 +67,7 @@ This list is updated automatically from the official [CHANGELOG.md](https://gith
 - Ganti per baris hanya memindai ulang file itu, jadi daftar hasil tidak lagi kembali ke atas.
 - Versi aplikasi naik ke 1.16.6 (versionCode 55).
 
-## [1.16.5] - 2026-10-26
+## v1.16.5 (26 Okt 2026)
 
 ### Changed
 
@@ -33,7 +75,7 @@ This list is updated automatically from the official [CHANGELOG.md](https://gith
 - Python: `input()` sekarang interaktif lewat kolom isian di panel Python Output. Program meminta nilai satu per satu dan dijalankan ulang dari awal setiap nilai dikirim, jadi kode yang memakai random atau waktu bisa menghasilkan keluaran berbeda di tiap pengulangan.
 - Versi aplikasi naik ke 1.16.5 (versionCode 54).
 
-## [1.16.4] - 2026-10-26
+## v1.16.4 (26 Okt 2026)
 
 ### Changed
 
@@ -41,7 +83,7 @@ This list is updated automatically from the official [CHANGELOG.md](https://gith
 - Python: program yang memanggil `input()` berhenti dengan EOFError dan pesan penjelasan, karena input interaktif belum didukung.
 - Versi aplikasi naik ke 1.16.4 (versionCode 53).
 
-## [1.16.3] - 2026-10-26
+## v1.16.3 (26 Okt 2026)
 
 ### Fixed
 
@@ -55,7 +97,7 @@ This list is updated automatically from the official [CHANGELOG.md](https://gith
 - Git: tombol Buang untuk membatalkan perubahan file terpilih (file yang belum dilacak dihapus permanen, dengan konfirmasi).
 - Versi aplikasi naik ke 1.16.3 (versionCode 52).
 
-## [1.16.2] - 2026-10-26
+## v1.16.2 (26 Okt 2026)
 
 ### Fixed
 
@@ -66,7 +108,7 @@ This list is updated automatically from the official [CHANGELOG.md](https://gith
 - Tinggi status bar di layar portrait dikunci untuk dua baris sehingga teks tidak terpotong.
 - Versi aplikasi naik ke 1.16.2 (versionCode 51).
 
-## [1.16.1] - 2026-10-23
+## v1.16.1 (23 Okt 2026)
 
 ### Changed
 
@@ -76,7 +118,7 @@ This list is updated automatically from the official [CHANGELOG.md](https://gith
 - Minimap otomatis dimatikan di layar sempit (di bawah 480 px) walau diaktifkan di Pengaturan, dan dinyalakan lagi saat layar melebar, supaya area kode lebih luas.
 - Versi aplikasi naik ke 1.16.1 (versionCode 50).
 
-## [1.16.0] - 2026-10-22
+## v1.16.0 (22 Okt 2026)
 
 ### Added
 
@@ -96,7 +138,7 @@ This list is updated automatically from the official [CHANGELOG.md](https://gith
 
 - Versi aplikasi naik ke 1.16.0 (versionCode 49).
 
-## [1.15.2] - 2026-10-21
+## v1.15.2 (21 Okt 2026)
 
 ### Fixed
 
@@ -108,7 +150,7 @@ This list is updated automatically from the official [CHANGELOG.md](https://gith
 - Rapikan indentasi baris `-i` include di jalur compile SA-MP klasik (perilaku tidak berubah).
 - Versi aplikasi naik ke 1.15.2 (versionCode 48).
 
-## [1.15.1] - 2026-10-16
+## v1.15.1 (16 Okt 2026)
 
 ### Added
 
@@ -127,7 +169,7 @@ This list is updated automatically from the official [CHANGELOG.md](https://gith
 - README: tambah fitur Python dan item roadmap Python.
 - Versi aplikasi naik ke 1.15.1 (versionCode 47).
 
-## [1.15.0] - 2026-10-13
+## v1.15.0 (13 Okt 2026)
 
 ### Added
 - Include bawaan APK (tanpa perlu memasang): sscanf2, YSI, streamer, a_mysql, zcmd, I-ZCMD, Pawn.CMD, Pawn.RakNet, crashdetect, amx_assembly, weapon-config. Otomatis masuk jalur include compiler dengan prioritas paling bawah, jadi versi milik proyek tetap menang.
@@ -146,7 +188,7 @@ This list is updated automatically from the official [CHANGELOG.md](https://gith
 - Welcome screen: tombol bergaya link biru rata kiri, daftar Recent bergaya VS Code.
 - Panel Ekstensi, Pengaturan, dan panel Output mengikuti gaya VS Code (baris rapat, tombol biru kecil, tag berbentuk pil).
 
-## [1.14.3] - 2026-10-13
+## v1.14.3 (13 Okt 2026)
 
 ### Added
 - Manajer Library / Include: tombol buku di header Explorer. Pasang include dari GitHub langsung ke `pawno/include` proyek aktif (SA-MP stdlib, sscanf2, YSI, Streamer, MySQL, zcmd, Pawn.CMD, Pawn.RakNet, crashdetect, amx_assembly, weapon-config).
@@ -154,13 +196,13 @@ This list is updated automatically from the official [CHANGELOG.md](https://gith
 - Cek pembaruan dan Hapus per library; versi tercatat di `pawno/.pawnstudio-libs.json`.
 - Hanya file `.inc` yang diekstrak (folder test/example/docs dilewati) dan struktur folder library dipertahankan.
 
-## [1.14.2] - 2026-10-13
+## v1.14.2 (13 Okt 2026)
 
 ### Fixed
 - Cek HP: tips merek HP (Samsung, Xiaomi, dan lainnya) sekarang berupa info biasa dan tidak dihitung sebagai catatan. Sebelumnya ringkasan di HP merek itu selalu "Sebagian fitur terbatas" walau semua izin sudah aktif.
 - Cek HP: nama merek ditulis dengan huruf awal besar (Samsung, bukan samsung).
 
-## [1.14.1] - 2026-10-13
+## v1.14.1 (13 Okt 2026)
 
 ### Added
 - **Cek Kompatibilitas HP** (Pengaturan, tombol **Cek HP**). Menampilkan info HP (merek, model, versi Android, arsitektur CPU, RAM, sisa penyimpanan) dan status tiap fitur: compiler PAWN, Node.js, Git, serta izin akses semua file, notifikasi, dan penghematan baterai. Setiap izin yang belum aktif punya tombol langsung ke pengaturan sistemnya.
@@ -168,7 +210,7 @@ This list is updated automatically from the official [CHANGELOG.md](https://gith
 - Tombol **Salin laporan** untuk membagikan hasil pengecekan, misalnya saat melapor bug.
 - Tips khusus untuk merek HP yang sering mematikan aplikasi di latar belakang (Xiaomi, Oppo, Vivo, Samsung, dan lainnya).
 
-## [1.14.0] - 2026-10-13
+## v1.14.0 (13 Okt 2026)
 
 ### Fixed
 - **Tema tambahan (Monokai, Dracula, One Dark, AMOLED Black, Light) tidak lagi kembali ke bawaan setelah app ditutup dan dibuka lagi.** Pilihan tema sekarang tetap menang walau Pengaturan app menerapkan ulang tema bawaan.
@@ -181,7 +223,7 @@ This list is updated automatically from the official [CHANGELOG.md](https://gith
 - Tema tambahan sekarang mengubah seluruh tampilan app (top bar, sidebar, bar kiri, tab, breadcrumb, status bar, panel output, pengaturan), bukan hanya editor.
 - Warna editor lebih lengkap: nomor baris, kursor, gutter, minimap, panel saran, dan garis indent mengikuti tema.
 
-## [1.13.0] - 2026-10-12
+## v1.13.0 (12 Okt 2026)
 
 ### Added
 - **Node.js tetap jalan di latar belakang**. Bot atau script yang dijalankan dari PawnStudio tidak lagi mati waktu app ditutup, di-swipe dari recent apps, atau layar mati.
@@ -194,12 +236,12 @@ This list is updated automatically from the official [CHANGELOG.md](https://gith
 ### Changed
 - Proses Node/npm sekarang dipegang `NodeSession` (tidak lagi terikat ke Activity), jadi menutup app tidak menghentikannya. Hentikan lewat tombol Stop di app atau di notifikasi.
 
-## [1.12.0] - 2026-10-12
+## v1.12.0 (12 Okt 2026)
 
 ### Added
 - **Pilihan Versi SA-MP** di Pengaturan: `0.3.DL-R1` (bawaan), `0.3.7-R2-1`, dan `0.3.7-R3`. Untuk 0.3.7, fungsi khusus 0.3.DL (`AddCharModel`, `AddSimpleModel`, `AddSimpleModelTimed`, `FindModelFileNameFromCRC`, `FindTextureFileNameFromCRC`, `RedirectDownload`) dianggap tidak ada, sehingga pemakaiannya langsung error saat compile, bukan baru bermasalah di server. Tidak berlaku di mode open.mp.
 
-## [1.11.0] - 2026-10-12
+## v1.11.0 (12 Okt 2026)
 
 ### Added
 - **Emmet** untuk file HTML dan CSS. Ketik singkatan seperti `ul>li*3` lalu expand untuk menghasilkan struktur otomatis.
@@ -220,7 +262,7 @@ This list is updated automatically from the official [CHANGELOG.md](https://gith
 ### Changed
 - Mode SA-MP/DL: include milik project sekarang didahulukan atas include bawaan aplikasi, sama seperti mode open.mp. Gamemode yang membawa include sendiri tidak lagi tertimpa.
 
-## [1.10.0] - 2026-10-11
+## v1.10.0 (11 Okt 2026)
 
 ### Added
 - Preview untuk project HTML. Buka file `.html`, lalu ketuk tombol Preview (ikon mata) atau tombol ▶. File `style.css` dan `script.js` yang di-link dengan `<link href>` dan `<script src>` otomatis digabung, dan isi editor yang belum disimpan ikut terpakai.
@@ -246,7 +288,7 @@ This list is updated automatically from the official [CHANGELOG.md](https://gith
 - Setiap muat ulang mengulang halaman dari awal, jadi isi form dan state JavaScript di dalam preview ikut tereset.
 - Library dari internet (CDN, Google Fonts) hanya termuat kalau HP sedang online.
 
-## [1.9.0] - 2026-10-10
+## v1.9.0 (10 Okt 2026)
 
 ### Added
 - Tombol "Salin" di header panel Output untuk menyalin seluruh isi output sekaligus, berguna untuk menempel error ke chat. Tombol berubah jadi "Tersalin ✓" saat berhasil. Baris lama yang sudah terbuang karena batas panel tidak ikut tersalin.
@@ -255,54 +297,54 @@ This list is updated automatically from the official [CHANGELOG.md](https://gith
 - Teks di panel Output dipaksa bisa di-select (`user-select: text`).
 - Nomor versi diperbarui ke 1.9.0 di Pengaturan, Pengaturan Lanjutan, `package.json`, dan `build.gradle`.
 
-## [1.8.9] - 2026-10-10
+## v1.8.9 (10 Okt 2026)
 
 ### Fixed
 - Addon native Node (misalnya `@napi-rs/canvas`) gagal dimuat dengan `cannot locate symbol "napi_unwrap"`. `libnode.so` sekarang di-preload secara global saat Node diluncurkan, sehingga addon bisa menemukan simbol Node-API.
 
-## [1.8.8] - 2026-10-10
+## v1.8.8 (10 Okt 2026)
 
 ### Fixed
 - Nomor versi di Pengaturan sekarang sesuai dengan versi APK.
 
-## [1.8.7] - 2026-10-10
+## v1.8.7 (10 Okt 2026)
 
 ### Fixed
 - Modul native (file `.node`, misalnya `@napi-rs/canvas`) yang berada di storage bersama (`/storage/emulated/0/...`) sekarang bisa dimuat. Android menolak `dlopen` dari lokasi itu, jadi file `.node` otomatis disalin sekali ke folder internal app lalu dimuat dari sana.
 
-## [1.8.6] - 2026-10-10
+## v1.8.6 (10 Okt 2026)
 
 ### Fixed
 - Bot discord.js yang memakai `@discordjs/builders` tidak lagi crash dengan `Invalid regular expression ... Invalid property name in character class`. Preload shim sekarang mengganti semua Unicode property escape (`\p{L}`, `\p{Ll}`, `\p{Lm}`, `\p{Lo}`, `\p{N}`, `\p{Nd}`, script Devanagari/Thai, dan sejenisnya) di semua modul, bukan cuma beberapa yang ketemu sebelumnya.
 
-## [1.8.5] - 2026-10-10
+## v1.8.5 (10 Okt 2026)
 
 ### Fixed
 - Lanjutan 1.8.4: runtime Node di APK tidak mendukung `\p{...}` sama sekali, jadi `\p{Letter}` dan `\p{Number}` di `discord-api-types` juga ikut diganti ke range Unicode setara. Bot discord.js sekarang bisa dimuat tanpa `Invalid regular expression`.
 
-## [1.8.4] - 2026-10-10
+## v1.8.4 (10 Okt 2026)
 
 ### Fixed
 - Bot discord.js tidak lagi crash dengan `SyntaxError: Invalid regular expression ... Invalid property name in character class` saat memuat `discord-api-types`. Runtime Node di APK tidak mendukung Unicode script property `\p{sc=Deva}` dan `\p{sc=Thai}`, jadi regex itu otomatis diganti ke range Unicode setara sebelum modul dikompilasi (lewat preload shim).
 
-## [1.8.3] - 2026-10-10
+## v1.8.3 (10 Okt 2026)
 
 ### Fixed
 - Error Node.js yang tidak tertangkap (misalnya modul tidak ditemukan, atau promise ditolak tanpa catch) sekarang tampil di panel Output. Sebelumnya prosesnya keluar dengan kode 1 tanpa pesan apa pun.
 - Pesan stderr (console.error) tidak lagi hilang kalau stderr tidak tersambung ke panel Output.
 
-## [1.8.2] - 2026-10-10
+## v1.8.2 (10 Okt 2026)
 
 ### Fixed
 - Petunjuk "Tidak ada output sama sekali" sekarang menghitung baris output yang tidak kosong, jadi tetap muncul walau Node hanya mengeluarkan spasi atau baris kosong.
 
-## [1.8.1] - 2026-10-10
+## v1.8.1 (10 Okt 2026)
 
 ### Added
 - Diagnostik exit Node.js: kalau script keluar lewat process.exit(kode) dengan kode bukan 0, panel Output menampilkan dari file dan baris mana process.exit() dipanggil. Berguna buat nemuin script yang keluar diam-diam (misalnya validasi config tanpa pesan).
 - Petunjuk di panel Output kalau Node keluar dengan error tanpa output sama sekali.
 
-## [1.8.0] - 2026-10-10
+## v1.8.0 (10 Okt 2026)
 
 ### Added
 - npm di dalam app. Tombol npm di header Explorer: ketik perintah, contoh `install discord.js`, `uninstall express`, `ls`, `init`. npm 10 (JavaScript murni) dibundel di APK dan dijalankan lewat runtime Node.js yang sama, jadi tidak perlu Termux. Paket masuk ke node_modules di folder project aktif dan langsung bisa di-require dari file .js. Explorer dimuat ulang otomatis setelah npm selesai.
@@ -314,11 +356,11 @@ This list is updated automatically from the official [CHANGELOG.md](https://gith
 - Label status bar untuk Node/npm dipersingkat (contoh: "✓ Node OK (0.7s)") supaya tidak memotong nama file dan bahasa.
 - Tombol di header Explorer diperkecil sedikit supaya kelima tombol (termasuk npm) muat.
 
-### Known Issues
+### Known issues
 - Paket yang butuh kompilasi native (node-gyp) tidak bisa dipasang. Paket JavaScript murni seperti discord.js dan express adalah target utamanya.
 - Butuh internet saat npm install. Belum diuji di perangkat.
 
-## [1.7.0] - 2026-10-09
+## v1.7.0 (9 Okt 2026)
 
 ### Added
 - Menjalankan Node.js langsung di dalam app. Runtime Node.js 18 (nodejs-mobile, arm64-v8a) ikut tertanam di APK, jadi tidak perlu Termux atau setup apa pun. Tekan Run di file .js/.mjs/.cjs, output tampil live di panel Output, tekan tombol yang sama lagi (berubah jadi Stop) untuk menghentikan. Proses jalan di folder project aktif.
@@ -329,11 +371,11 @@ This list is updated automatically from the official [CHANGELOG.md](https://gith
 - Tombol Run di file Node.js sekarang benar-benar menjalankan file, bukan lagi menampilkan petunjuk. File .ts tetap menampilkan petunjuk (compile ke .js dulu).
 - Ukuran APK bertambah karena runtime Node.js ikut dibundel.
 
-### Known Issues
+### Known issues
 - Hanya arm64-v8a dan Node.js 18; npm belum tersedia (node_modules yang sudah ada di folder project tetap bisa di-require).
 - Sebagian modul bawaan yang butuh akses sistem Android (misalnya os.networkInterfaces) bisa gagal. Belum diuji di perangkat.
 
-## [1.6.0] - 2026-10-09
+## v1.6.0 (9 Okt 2026)
 
 ### Added
 - Icon folder & file berwarna ala Material Icon Theme (icons.js): gamemodes, filterscripts, plugins, scriptfiles, npcmodes, database, logs, compiled, dan lainnya punya warna + simbol sendiri. File .pwn, .inc, .amx, .dll, .so, .bat, .cfg, .json, .zip, .png juga punya icon sendiri.
@@ -347,44 +389,44 @@ This list is updated automatically from the official [CHANGELOG.md](https://gith
 - File binary (.dll, .amx, .so) tidak lagi diabu-abukan, icon tetap berwarna dengan opacity 0.85.
 - Versi APK dinaikkan ke 1.6.0 (versionCode 25).
 
-## [1.5.9] - 2026-10-09
+## v1.5.9 (9 Okt 2026)
 
 ### Added
 - Auto-complete konstanta SA-MP (234 nama, mis. INVALID_PLAYER_ID, DIALOG_STYLE_*, WEAPON_*, KEY_*) lengkap dengan keterangan grup.
 - Petunjuk parameter saat kursor di dalam kurung fungsi, parameter yang sedang diisi disorot.
 - Hover di nama fungsi dan konstanta.
 
-## [1.5.8] - 2026-10-09
+## v1.5.8 (9 Okt 2026)
 
 ### Added
-- Dukungan include open.mp: kode yang memakai <open.mp> atau <omp_*> dicompile dengan include open.mp bawaan (omp-stdlib, MPL-2.0). Kode SA-MP klasik tidak berubah.
+- Dukungan include open.mp: kode yang memakai &lt;open.mp&gt; atau &lt;omp_*&gt; dicompile dengan include open.mp bawaan (omp-stdlib, MPL-2.0). Kode SA-MP klasik tidak berubah.
 
-## [1.5.7] - 2026-10-08
+## v1.5.7 (8 Okt 2026)
 
 ### Fixed
 - Tombol Cari / Ganti: coba beberapa aksi Monaco dan tampilkan pesan jika panel pencarian tidak bisa dibuka.
 
-## [1.5.6] - 2026-10-08
+## v1.5.6 (8 Okt 2026)
 
 ### Added
 - Tombol Cari / Ganti di header dan di ikon pencarian sidebar (memakai panel Find/Replace bawaan Monaco).
 
-## [1.5.5] - 2026-10-08
+## v1.5.5 (8 Okt 2026)
 
 ### Fixed
 - Label versi di Settings dan Pengaturan Lanjutan sekarang sesuai versi rilis (sebelumnya masih menampilkan v1.5.2 di build 1.5.3 dan 1.5.4).
 
-## [1.5.4] - 2026-10-08
+## v1.5.4 (8 Okt 2026)
 
 ### Added
 - Snippet callback baru: OnGameModeExit, OnPlayerDeath, OnPlayerText, OnDialogResponse, OnPlayerEnterVehicle, OnPlayerKeyStateChange.
 
-## [1.5.3] - 2026-10-08
+## v1.5.3 (8 Okt 2026)
 
 ### Changed
 - Auto-complete: daftar fungsi SA-MP diperlengkap (player, kendaraan, textdraw, object, server, string, float, PVar, file).
 
-## [1.5.2] - 2026-10-07
+## v1.5.2 (7 Okt 2026)
 
 ### Fixed
 - Toolbar simbol numpuk: sebelumnya ada dua bar sekaligus di atas keyboard (`#symbol-bar` lama dan `#v151-bar`), sehingga baris simbol kepotong. Sekarang tinggal satu bar.
@@ -394,7 +436,7 @@ This list is updated automatically from the official [CHANGELOG.md](https://gith
 - Bar simbol lama (`#symbol-bar`) dinonaktifkan, semua simbolnya dipakai lewat `#v151-bar`.
 - Toolbar ditambah simbol `_` dan `:`.
 
-## [1.5.1] - 2026-10-07
+## v1.5.1 (7 Okt 2026)
 
 ### Removed
 - Fitur Git di dalam app (init, commit, push, pull) beserta plugin native GitPlugin dan dependensi JGit, karena APK dirilis publik.
@@ -412,7 +454,7 @@ This list is updated automatically from the official [CHANGELOG.md](https://gith
 - Bar simbol: ditambah simbol `" % = / \ , & | ! + - * _ : ' @` dan bisa digeser
 - README: fitur dan roadmap disamakan dengan kondisi app
 
-## [1.5.0] - HUD Overhaul (Header, Explorer, Status Bar, Symbol Bar)
+## v1.5.0
 
 ### Added
 - **Bar simbol di atas keyboard**: tombol cepat `Tab` `{` `}` `;` `(` `)` `[` `]` `#` `<` `>` yang muncul otomatis saat editor difokus. Tombol tidak menutup keyboard, dan simbol diketik lewat Monaco sehingga auto-close bracket tetap jalan
@@ -430,7 +472,7 @@ This list is updated automatically from the official [CHANGELOG.md](https://gith
 - `windowSoftInputMode` diset `adjustResize` agar layout (termasuk bar simbol) naik mengikuti keyboard
 - Versi APK dinaikkan ke `1.5.0` (`versionName` 1.5.0, `versionCode` 15); sebelumnya `versionName` masih `1.0`
 
-## [1.4.0] - Bulk Import & Compiler Include Path
+## v1.4.0
 
 ### Added
 - Plugin `BulkImport` baru: import folder besar/kompleks pakai izin "All Files Access" (`MANAGE_EXTERNAL_STORAGE`) + `java.io.File` murni, tanpa lewat SAF/DocumentFile yang terbukti tidak reliable untuk folder dengan ribuan entry (misal folder `pawno` penuh)
@@ -442,19 +484,18 @@ This list is updated automatically from the official [CHANGELOG.md](https://gith
 - `FolderPickerPlugin` sekarang copy file byte-per-byte (bukan mode teks), menghilangkan kebutuhan menebak binary/teks dan risiko file ter-corrupt
 - Proses extract `.zip` tidak lagi berhenti total kalau 1 file gagal ditulis — lanjut ke file berikutnya dan dicatat sebagai gagal di log
 
-### Known Issues
+### Known issues
 - Folder dengan ribuan entry kecil (misal folder `pawno` penuh berisi seluruh aplikasi editor Windows) sebaiknya diimport lewat `BulkImport`, bukan upload folder berbasis SAF/zip biasa
 - GitHub Actions storage quota bisa penuh kalau build terlalu sering dalam waktu singkat; penghitungan ulang kuota oleh GitHub butuh 6-12 jam setelah menghapus artifact/release lama
 
-## [1.3.0] - Welcome Screen & Problems Indicator
+## v1.3.0
 
 ### Added
 - Welcome Screen yang muncul saat tidak ada file terbuka: tombol File Baru/Folder Baru, dan daftar Recent Files (5 terakhir)
 - Badge jumlah error/warning di status bar, update otomatis setiap kali compile
 - Filter ekstensi file di FolderPicker dihapus — sekarang semua jenis file bisa diupload lewat folder picker native (dengan catatan file binary dibaca sebagai teks)
 
-
-## [1.2.0] - Native Storage Plugin (Major Stability Fix)
+## v1.2.0
 
 ### Fixed
 - **Bug kritis**: file/folder yang dihapus muncul kembali secara misterius, bahkan setelah uninstall total aplikasi. Setelah investigasi panjang (cek race condition, cek Android Auto Backup, cek Google/Samsung Cloud backup), akar masalah dilacak ke plugin resmi `@capacitor/filesystem` yang tidak konsisten pada operasi delete+recreate+list secara berurutan di Android.
@@ -467,8 +508,7 @@ This list is updated automatically from the official [CHANGELOG.md](https://gith
 ### Added
 - `data_extraction_rules.xml` untuk mengunci aturan no-backup secara eksplisit di Android 12+
 
-
-## [1.1.0] - VSCode-style Sidebar & Filesystem Fixes
+## v1.1.0
 
 ### Added
 - Section "OPEN EDITORS" di sidebar, menampilkan daftar tab yang sedang terbuka (mirror dari tab bar), bisa switch/close langsung dari situ
@@ -478,7 +518,7 @@ This list is updated automatically from the official [CHANGELOG.md](https://gith
 - Error `FILE_NOTCREATED` saat upload/extract folder `.zip` — ditambahkan flag `recursive: true` langsung pada setiap pemanggilan `Filesystem.writeFile`, karena `mkdir` saja tidak selalu cukup untuk memastikan direktori induk tersedia saat file ditulis
 - Callback inisialisasi utama kini benar-benar `async`/`await` mengikuti Filesystem API, memperbaiki potential race condition yang tersisa dari migrasi storage sebelumnya
 
-## [1.0.0] - Real Filesystem Storage & Full File Management
+## v1.0.0
 
 ### Added
 - Tombol Upload File dan Upload Folder di File Explorer
@@ -495,11 +535,11 @@ This list is updated automatically from the official [CHANGELOG.md](https://gith
 - Error `Directory is not defined` — enum `Directory`/`Encoding` Capacitor di-hardcode karena tidak tersedia di runtime tanpa bundler
 - Error install "Aplikasi tidak terinstal" akibat perbedaan debug signing key antar build CI (workaround: uninstall versi lama sebelum install baru)
 
-### Known Issues
+### Known issues
 - Upload folder masih memerlukan format `.zip`, belum bisa langsung pilih folder mentah (keterbatasan `webkitdirectory` pada WebView Android)
 - Signing key debug build belum konsisten antar build CI — kadang perlu uninstall manual sebelum update
 
-## [0.9.0] - Fully Offline
+## v0.9.0
 
 ### Changed
 - Monaco Editor dibundel langsung ke dalam APK (folder `www/vs/`), tidak lagi di-load dari CDN eksternal
@@ -508,7 +548,7 @@ This list is updated automatically from the official [CHANGELOG.md](https://gith
 ### Removed
 - Dependency ke `cdnjs.cloudflare.com` untuk loading Monaco Editor
 
-## [0.8.0] - VSCode-style UI Overhaul
+## v0.8.0
 
 ### Added
 - Activity Bar di sisi kiri (ikon Explorer, Search, Settings) — layout makin mirip VSCode asli
@@ -521,7 +561,7 @@ This list is updated automatically from the official [CHANGELOG.md](https://gith
 - Status bar dipecah jadi grup kiri (info file) dan kanan (cursor position, bahasa) agar lebih rapi
 - Tombol Settings kini juga bisa diakses dari Activity Bar, selain dari topbar
 
-## [0.7.0] - Branding & Polish
+## v0.7.0
 
 ### Added
 - App icon custom (pawn chess piece + curly braces) untuk semua densitas layar Android
@@ -532,7 +572,7 @@ This list is updated automatically from the official [CHANGELOG.md](https://gith
 - Seluruh icon UI (topbar, sidebar, tab) diganti dari emoji menjadi SVG custom — tampilan lebih konsisten dan tajam di semua ukuran layar
 - Nama file APK hasil build diseragamkan menjadi `PawnStudio.apk` (sebelumnya `app-debug.apk` di dalam `PawnStudio-debug-apk.zip`)
 
-## [0.6.0] - Settings Panel
+## v0.6.0
 
 ### Added
 - Panel Settings (ikon gear di topbar) dengan opsi:
@@ -541,7 +581,7 @@ This list is updated automatically from the official [CHANGELOG.md](https://gith
   - Toggle Word Wrap
 - Preferensi settings tersimpan permanen di `localStorage`, otomatis diterapkan ulang tiap app dibuka
 
-## [0.5.0] - Compiler Integration (Native, Offline)
+## v0.5.0
 
 ### Added
 - Integrasi compiler PAWN asli (`pawn-lang/compiler`), di-cross-compile khusus untuk Android arm64-v8a menggunakan Android NDK
@@ -559,7 +599,7 @@ This list is updated automatically from the official [CHANGELOG.md](https://gith
 - Error `Permission denied` saat eksekusi binary dari `filesDir` — dipindah ke `jniLibs` sesuai kebijakan W^X Android modern
 - Path checkout CMake yang salah pada workflow cross-compile
 
-## [0.4.0] - CI/CD Setup
+## v0.4.0
 
 ### Added
 - Konfigurasi Capacitor (`capacitor.config.json`, `package.json`)
@@ -569,13 +609,13 @@ This list is updated automatically from the official [CHANGELOG.md](https://gith
 ### Fixed
 - Permission `contents: write` pada workflow agar step pembuatan Release tidak gagal dengan error 403
 
-## [0.3.0] - Syntax Highlighting & Auto-complete
+## v0.3.0
 
 ### Added
 - Syntax highlighting PAWN custom (`pawnLanguage.js`) — keyword, tipe data, string, comment, angka, dan function call
 - Auto-complete/IntelliSense (`pawnCompletion.js`) — 30+ fungsi umum SA-MP/Open.MP beserta deskripsi parameter, dan snippet struktur kode (`if`, `for`, callback `OnPlayer*`, dll)
 
-## [0.2.0] - File Management System
+## v0.2.0
 
 ### Added
 - Sidebar File Explorer — buat, buka, dan hapus file/folder
@@ -586,10 +626,11 @@ This list is updated automatically from the official [CHANGELOG.md](https://gith
 ### Changed
 - `index.html` dan `style.css` dirombak untuk mendukung layout sidebar + tab bar
 
-## [0.1.0] - Initial Setup
+## v0.1.0
 
 ### Added
 - Struktur dasar `index.html`, `style.css`, `main.js`
 - Integrasi Monaco Editor via CDN (AMD loader)
 - Tema gelap ala VSCode, full-screen layout
 - Auto-restore draft terakhir dari `localStorage`
+
