@@ -33,7 +33,7 @@
 
 ## 📲 Install
 
-Download APK terbaru di tab [**Releases**](https://github.com/Julakk/Pawn-Studio/releases), lalu install di Android (arm64).
+Download APK terbaru di [**MediaFire**](https://www.mediafire.com/file/1cczcmatry05nlk/PawnStudio.apk/file), lalu install di Android (arm64).
 
 ## 🚧 Status Proyek
 

@@ -5,7 +5,7 @@ description: "PawnStudio release history by version, pulled automatically from t
 # Changelog
 
 ::: info
-This list is updated automatically from the official [CHANGELOG.md](https://github.com/Julakk/Pawn-Studio/blob/main/CHANGELOG.md). The release notes themselves are written in Indonesian. APK packages are on the [Releases page](https://github.com/Julakk/Pawn-Studio/releases).
+This list is updated automatically from the official [CHANGELOG.md](https://github.com/Julakk/Pawn-Studio/blob/main/CHANGELOG.md). The release notes themselves are written in Indonesian. The APK is on the [Download page](/en/download).
 :::
 
 ## v1.18.0 (13 Nov 2026)

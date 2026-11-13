@@ -38,11 +38,20 @@ Bot seharusnya tetap jalan lewat notifikasi **Node.js berjalan**. Cek **Pengatur
 
 ### Apakah Python didukung?
 
-Ya, sejak v1.15.1. File `.py` bisa langsung dijalankan di app lewat tombol Run di top bar (Python 3.12 lewat Pyodide, jalan offline). Yang tersedia hanya modul bawaan Python (stdlib). Library pihak ketiga seperti numpy belum bisa dipakai, dan `input()` menerima baris kosong.
+Ya, sejak v1.15.1. File `.py` bisa langsung dijalankan di app lewat tombol Run di top bar. Ada dua mode:
+
+- **Pyodide (Python 3.12)**: script biasa, jalan offline. Hanya modul bawaan Python (stdlib), dan `input()` menerima baris kosong.
+- **Python native (3.11)**, sejak v1.17.0: script yang `import discord`, `aiohttp`, atau `requests` otomatis jalan native, jadi bot Discord (`discord.py`) bisa dijalankan dan tetap hidup di latar belakang. Tulis `# ps:native` atau `# ps:web` di file untuk memilih mode sendiri. `input()` belum didukung di mode ini.
+
+Sejak v1.18.0 ada `pip` di dalam app: lihat **Bagaimana cara pasang paket Python (pip)?** di bawah.
+
+### Bagaimana cara pasang paket Python (pip)?
+
+Tekan tombol npm di Explorer, lalu ketik `pip install nama_paket` (contoh: `pip install rich`). Perintah lain: `pip uninstall nama_paket`, `pip list`, dan `pip install -r requirements.txt`. Paket Python murni dari PyPI dan paket native yang punya wheel Android arm64 (Python 3.11) bisa dipasang. Paket yang butuh kompilasi belum bisa. Script yang meng-import paket hasil pip otomatis jalan lewat Python native.
 
 ### Boleh bagikan APK ke teman?
 
-Jangan bagikan file APK-nya. Bagikan link halaman Releases resmi.
+Jangan bagikan file APK-nya. Bagikan link halaman Download resmi.
 
 ### Gue nemu bug, lapor ke mana?
 

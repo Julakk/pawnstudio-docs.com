@@ -6,8 +6,8 @@ description: "PawnStudio quick start guide, from installing the APK to opening y
 
 ## Install
 
-1. Open the [Releases](https://github.com/Julakk/Pawn-Studio/releases/latest) page.
-2. Download the latest APK file.
+1. Open the [Download](/en/download) page and tap **Download APK**.
+2. Download the APK file.
 3. Install the APK (allow installs from unknown sources if asked).
 4. Open PawnStudio and grant storage access.
 

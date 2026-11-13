@@ -37,7 +37,7 @@ PawnStudio gratis dipakai tapi bukan open source, jadi nggak menerima Pull Reque
 - **Tes di HP dan versi Android yang berbeda.** Kirim laporan **Cek HP** kalau ada yang nggak jalan.
 - **Kasih tahu kalau dokumentasi salah.** Typo atau langkah yang membingungkan? Kabari lewat Issue atau Discord.
 - **Bantu jawab pertanyaan** pengguna lain di Discord.
-- **Bagikan link** [halaman Releases](https://github.com/Julakk/Pawn-Studio/releases) ke teman lo.
+- **Bagikan link** [halaman Download](/download) ke teman lo.
 
 ## Aturan Komunitas
 
@@ -47,13 +47,13 @@ Berlaku di Discord dan di Issue GitHub.
 2. Satu masalah, satu Issue. Cek Issue yang sudah ada sebelum bikin baru.
 3. Sertakan teks error dan versi PawnStudio, biar masalahnya bisa dilacak.
 4. Jangan posting token, password, atau data pribadi (termasuk token bot).
-5. Jangan bagikan atau minta file APK di luar halaman Releases resmi.
+5. Jangan bagikan atau minta file APK di luar halaman Download resmi.
 6. Cek [FAQ](/faq) dan [Troubleshooting](/guide/troubleshooting) dulu sebelum bertanya.
 
 ## Dukung Pengembangan
 
 - Dukung lewat [Saweria](https://saweria.co/bangjulak12).
-- Bagikan link halaman Releases, bukan file APK-nya.
+- Bagikan link halaman Download, bukan file APK-nya.
 
 ## Kredit dan Terima Kasih
 

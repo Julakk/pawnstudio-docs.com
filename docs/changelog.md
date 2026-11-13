@@ -4,7 +4,7 @@ description: "Riwayat perubahan PawnStudio per versi, diambil otomatis dari repo
 
 # Changelog
 
-Daftar ini diperbarui otomatis dari [CHANGELOG.md](https://github.com/Julakk/Pawn-Studio/blob/main/CHANGELOG.md). Paket APK ada di [halaman Releases](https://github.com/Julakk/Pawn-Studio/releases).
+Daftar ini diperbarui otomatis dari [CHANGELOG.md](https://github.com/Julakk/Pawn-Studio/blob/main/CHANGELOG.md). APK ada di [halaman Download](/download).
 
 ## v1.18.0 (13 Nov 2026)
 

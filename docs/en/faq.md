@@ -38,11 +38,20 @@ The bot should keep running through the **Node.js running** notification. Check 
 
 ### Is Python supported?
 
-Yes, since v1.15.1. `.py` files can run directly in the app with the Run button in the top bar (Python 3.12 via Pyodide, works offline). Only Python's built-in modules (stdlib) are available. Third-party libraries such as numpy can't be used yet, and `input()` accepts empty lines.
+Yes, since v1.15.1. `.py` files can run directly in the app with the Run button in the top bar. There are two modes:
+
+- **Pyodide (Python 3.12)**: regular scripts, works offline. Only Python's built-in modules (stdlib), and `input()` accepts empty lines.
+- **Native Python (3.11)**, since v1.17.0: scripts that `import discord`, `aiohttp`, or `requests` automatically run natively, so Discord bots (`discord.py`) can run and stay alive in the background. Put `# ps:native` or `# ps:web` in the file to pick a mode yourself. `input()` is not supported in this mode.
+
+Since v1.18.0 the app has `pip`: see **How do I install Python packages (pip)?** below.
+
+### How do I install Python packages (pip)?
+
+Tap the npm button in the Explorer, then type `pip install package_name` (for example `pip install rich`). Other commands: `pip uninstall package_name`, `pip list`, and `pip install -r requirements.txt`. Pure-Python packages from PyPI and native packages that have an Android arm64 wheel (Python 3.11) can be installed. Packages that need compiling are not supported yet. Scripts that import a pip-installed package automatically run on native Python.
 
 ### Can I share the APK with friends?
 
-Please don't share the APK file. Share the link to the official Releases page instead.
+Please don't share the APK file. Share the link to the official Download page instead.
 
 ### I found a bug. Where do I report it?
 

@@ -1,5 +1,5 @@
 <script setup>
-import { ref, computed, onMounted } from 'vue'
+import { ref, computed } from 'vue'
 import { useData } from 'vitepress'
 import latest from '../data/latest.json'
 
@@ -12,15 +12,6 @@ const labels = computed(() =>
     : { version: 'Versi terbaru', platforms: 'Platform didukung', offline: 'Bisa offline', free: 'Gratis', freeSub: 'Dipakai' }
 )
 
-onMounted(async () => {
-  try {
-    const r = await fetch('https://api.github.com/repos/Julakk/Pawn-Studio/releases/latest')
-    if (r.ok) {
-      const d = await r.json()
-      if (d.tag_name) version.value = d.tag_name
-    }
-  } catch (e) {}
-})
 </script>
 
 <template>

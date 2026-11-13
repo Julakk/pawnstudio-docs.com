@@ -73,11 +73,11 @@ async function main() {
   const headId =
     '---\ndescription: "Riwayat perubahan PawnStudio per versi, diambil otomatis dari repo resmi."\n---\n\n# Changelog\n\n' +
     'Daftar ini diperbarui otomatis dari [CHANGELOG.md](https://github.com/Julakk/Pawn-Studio/blob/main/CHANGELOG.md). ' +
-    'Paket APK ada di [halaman Releases](https://github.com/Julakk/Pawn-Studio/releases).\n\n'
+    'APK ada di [halaman Download](/download).\n\n'
   const headEn =
     '---\ndescription: "PawnStudio release history by version, pulled automatically from the official repository."\n---\n\n# Changelog\n\n' +
     '::: info\nThis list is updated automatically from the official [CHANGELOG.md](https://github.com/Julakk/Pawn-Studio/blob/main/CHANGELOG.md). ' +
-    'The release notes themselves are written in Indonesian. APK packages are on the [Releases page](https://github.com/Julakk/Pawn-Studio/releases).\n:::\n\n'
+    'The release notes themselves are written in Indonesian. The APK is on the [Download page](/en/download).\n:::\n\n'
   let md = ''
 
   for (const v of rilis) {

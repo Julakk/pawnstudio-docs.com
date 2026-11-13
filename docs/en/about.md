@@ -37,7 +37,7 @@ PawnStudio is free to use but not open source, so Pull Requests aren't accepted.
 - **Test on different phones and Android versions.** Send a **Phone Check** report if something doesn't work.
 - **Tell us if the documentation is wrong.** A typo or a confusing step? Let us know via Issue or Discord.
 - **Help answer questions** from other users on Discord.
-- **Share the link** to the [Releases page](https://github.com/Julakk/Pawn-Studio/releases) with your friends.
+- **Share the link** to the [Download page](/en/download) with your friends.
 
 ## Community Rules
 
@@ -47,13 +47,13 @@ Applies on Discord and in GitHub Issues.
 2. One problem, one Issue. Check existing Issues before opening a new one.
 3. Include the error text and PawnStudio version so the problem can be traced.
 4. Don't post tokens, passwords, or personal data (including bot tokens).
-5. Don't share or request APK files outside the official Releases page.
+5. Don't share or request APK files outside the official Download page.
 6. Check the [FAQ](/en/faq) and [Troubleshooting](/en/guide/troubleshooting) before asking.
 
 ## Support Development
 
 - Support via [Saweria](https://saweria.co/bangjulak12).
-- Share the Releases page link, not the APK file.
+- Share the Download page link, not the APK file.
 
 ## Credits and Thanks
 

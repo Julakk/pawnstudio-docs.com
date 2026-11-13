@@ -11,7 +11,7 @@ import latest from './.vitepress/data/latest.json'
 <div class="cta">
 <h3>PawnStudio {{ latest.version }}</h3>
 <p>Gratis dipakai. Untuk Android (arm64).</p>
-<a class="btn" href="https://github.com/Julakk/Pawn-Studio/releases">Download APK</a>
+<a class="btn" href="https://www.mediafire.com/file/1cczcmatry05nlk/PawnStudio.apk/file">Download APK</a>
 <a class="btn alt" href="https://github.com/Julakk/Pawn-Studio">Lihat di GitHub</a>
 </div>
 
@@ -25,8 +25,8 @@ import latest from './.vitepress/data/latest.json'
 
 ## Cara Install
 
-1. Buka halaman [Releases](https://github.com/Julakk/Pawn-Studio/releases).
-2. Download file APK versi terbaru.
+1. Tekan tombol **Download APK** di atas (link MediaFire).
+2. Download file APK-nya.
 3. Buka file APK dan izinkan install dari sumber tidak dikenal kalau diminta.
 4. Buka PawnStudio, lalu lanjut ke [Mulai Cepat](/guide/getting-started).
 

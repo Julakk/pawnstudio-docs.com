@@ -6,8 +6,8 @@ description: "Panduan mulai cepat PawnStudio, dari install APK sampai membuka pr
 
 ## Install
 
-1. Buka halaman [Releases](https://github.com/Julakk/Pawn-Studio/releases/latest).
-2. Download file APK versi terbaru.
+1. Buka halaman [Download](/download) lalu tekan **Download APK**.
+2. Download file APK-nya.
 3. Install APK (izinkan install dari sumber tidak dikenal kalau diminta).
 4. Buka PawnStudio dan beri izin akses penyimpanan.
 
